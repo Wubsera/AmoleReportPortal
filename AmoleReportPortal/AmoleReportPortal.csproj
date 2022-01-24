@@ -1,0 +1,1036 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{47A31335-6174-4628-86C9-B17889C3FC71}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AmoleReportPortal</RootNamespace>
+    <AssemblyName>AmoleReportPortal</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine">
+      <HintPath>c:\program files (x86)\sap businessobjects\crystal reports for .net framework 4.0\common\sap businessobjects enterprise xi 4.0\win32_x86\dotnet\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource">
+      <HintPath>c:\program files (x86)\sap businessobjects\crystal reports for .net framework 4.0\common\sap businessobjects enterprise xi 4.0\win32_x86\dotnet\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared">
+      <HintPath>c:\program files (x86)\sap businessobjects\crystal reports for .net framework 4.0\common\sap businessobjects enterprise xi 4.0\win32_x86\dotnet\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Web">
+      <HintPath>c:\program files (x86)\sap businessobjects\crystal reports for .net framework 4.0\common\sap businessobjects enterprise xi 4.0\win32_x86\dotnet\CrystalDecisions.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=AMD64">
+      <HintPath>..\packages\Cfee.CrystalReports.Log4Net.13.0.3501.1\lib\net20\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.3.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ReportPortal.Client, Version=3.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ReportPortal.Client.3.0.2\lib\net45\ReportPortal.Client.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ReportPortal.Shared, Version=3.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ReportPortal.Shared.3.0.2\lib\net45\ReportPortal.Shared.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="StatePrinter, Version=3.0.0.0, Culture=neutral, PublicKeyToken=693eec472ad792e3, processorArchitecture=MSIL">
+      <HintPath>..\packages\StatePrinter.3.0.1\lib\net35\StatePrinter.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebActivatorEx.2.0.2\lib\net40\WebActivatorEx.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Css\UploadBulkPaymentFile.css" />
+    <Content Include="UploadBulkPaymentFile.aspx" />
+    <Content Include="AboutUs.aspx" />
+    <Content Include="AirtimeTopup.aspx" />
+    <Content Include="AmoleServiceIntergrationLogReport.aspx" />
+    <Content Include="Css\CustomerLookup.css" />
+    <Content Include="Css\ChangePassword.css" />
+    <Content Include="Css\helpdeskc.css" />
+    <Content Include="Css\PortalReportServiceIntegration.css" />
+    <Content Include="Css\ProfileUpdate.css" />
+    <Content Include="CanalPlusPayments.aspx" />
+    <Content Include="CustomerLookupReport.aspx" />
+    <Content Include="CustomerAccountStatement.aspx" />
+    <Content Include="DSTVPaymentsReport.aspx" />
+    <Content Include="GESAccountBalance.aspx" />
+    <Content Include="ICSAccountBalance.aspx" />
+    <Content Include="FieldAgentsActiveInactiveReports.aspx" />
+    <Content Include="AmoleAgentActivityForFieldAgentsReport.aspx" />
+    <Content Include="FieldAgentSalesReport.aspx" />
+    <Content Include="helpDeskRP.aspx" />
+    <Content Include="image\AmoleIcon.jpg" />
+    <Content Include="image\Facebook.png" />
+    <Content Include="image\Instagram.png" />
+    <Content Include="image\Telegram2.png" />
+    <Content Include="image\Twitter.png" />
+    <Content Include="PortalGetListCustomerLookupReport.aspx" />
+    <Content Include="PortalGetListAmoleAgentActivityForFieldAgentsReport.aspx" />
+    <Content Include="PortalGetListCanalPlusTransactionLogReport.aspx" />
+    <Content Include="PortalGetListDSTVPaymentsReport.aspx" />
+    <Content Include="PortalGetListGESAccountBalance.aspx" />
+    <Content Include="PortalGetListICSAccountBalance.aspx" />
+    <Content Include="PortalGetListDSTVTransactionLogReport.aspx" />
+    <Content Include="PortalGetListFieldAgentActiveInactiveReport1.aspx" />
+    <Content Include="PortalGetListFieldAgentSalesReport.aspx" />
+    <Content Include="PortalGetListFieldAgentsActiveInactiveReport.aspx" />
+    <Content Include="PortalGetListRemittanceSettlementReport.aspx" />
+    <Content Include="PortalGetListRemittanceSuspenseAccountReport.aspx" />
+    <Content Include="PortalGetListAccountStatement.aspx" />
+    <Content Include="RemittanceSettlementReport.aspx" />
+    <Content Include="RemittanceSuspenseAccountReport.aspx" />
+    <Content Include="ProfileUpdate.aspx" />
+    <Content Include="ContentSales.aspx" />
+    <Content Include="ContentRedeem.aspx" />
+    <Content Include="Css\BG.jpg" />
+    <Content Include="CustomerLookup.css" />
+    <Content Include="Css\ForcePasswordChange.css" />
+    <Content Include="Css\RemittanceCheckStatus.css" />
+    <Content Include="Css\PortalRemittanceGet.css" />
+    <Content Include="Css\PortalGetList.css" />
+    <Content Include="Css\PortalReport.css" />
+    <Content Include="Css\AboutUs.css" />
+    <Content Include="Css\PrintReceipt.css" />
+    <Content Include="Css\WebForm1.css" />
+    <Content Include="Css\PortalGetListConentRedeem.css" />
+    <Content Include="Css\PortalReportavailable.css" />
+    <Content Include="Css\helpdesk.css" />
+    <Content Include="Css\style.css" />
+    <Content Include="CustomerLookup.aspx" />
+    <Content Include="dstv.aspx" />
+    <Content Include="DSTVTransactionLogReport.aspx" />
+    <Content Include="EthAirlinesReservation.aspx" />
+    <Content Include="ChangePassword.aspx" />
+    <Content Include="ResetPassword.aspx" />
+    <Content Include="ForcePasswordChange.aspx" />
+    <Content Include="GridViewHelperSample.aspx" />
+    <Content Include="helpDeskc.aspx" />
+    <Content Include="helpDesk.aspx" />
+    <Content Include="image\90Fest.jpg" />
+    <Content Include="image\Amole Tiket Villa.jpg" />
+    <Content Include="image\Amole-Logo.png" />
+    <Content Include="image\AmoleImage.png" />
+    <Content Include="image\AmoleImage2.png" />
+    <Content Include="image\AmoleImage3.png" />
+    <Content Include="image\back.png" />
+    <Content Include="image\BG.jpg" />
+    <Content Include="image\check4.png" />
+    <Content Include="image\CheckMark5.png" />
+    <Content Include="image\CheckMark6.png" />
+    <Content Include="image\CheckMark8.jpg" />
+    <Content Include="image\Confirm.png" />
+    <Content Include="image\Deny.png" />
+    <Content Include="image\ertale.jpg" />
+    <Content Include="image\Fb.png" />
+    <Content Include="image\IDCard.jpg" />
+    <Content Include="image\Insta.png" />
+    <Content Include="image\jano.jpg" />
+    <Content Include="image\Message.png" />
+    <Content Include="image\Message2.png" />
+    <Content Include="image\message4.jpg" />
+    <Content Include="image\Password.png" />
+    <Content Include="image\person.png" />
+    <Content Include="image\person2.png" />
+    <Content Include="image\Phone.png" />
+    <Content Include="image\Phone2.png" />
+    <Content Include="image\phone3.jpg" />
+    <Content Include="image\phone4.png" />
+    <Content Include="image\phone5.jpg" />
+    <Content Include="image\phone6.jpg" />
+    <Content Include="image\printer.png" />
+    <Content Include="image\run.png" />
+    <Content Include="image\telegram.png" />
+    <Content Include="image\Twwit.png" />
+    <Content Include="image\User_ID.png" />
+    <Content Include="Login.aspx" />
+    <Content Include="AmolePaymentGatewayLogReport1.aspx" />
+    <Content Include="MerchantAccTransactionsReport.aspx" />
+    <Content Include="ContentSalesDetailReport.aspx" />
+    <Content Include="PrintReceiptCheckStatus.aspx" />
+    <Content Include="RemittanceCheckStatus.aspx" />
+    <Content Include="ReprintReceipt.aspx" />
+    <Content Include="RemittanceReprintReceipt.aspx" />
+    <Content Include="PortalRemittanceCashOut.aspx" />
+    <Content Include="Print.html" />
+    <Content Include="PrintReceipt.aspx" />
+    <Content Include="RemittanceReport.aspx" />
+    <Content Include="packages.config" />
+    <Content Include="PortalGetListContentSalesDetailReport.aspx" />
+    <Content Include="PortalGetListRemittanceReport.aspx" />
+    <Content Include="WebForm1.aspx" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global.asax" />
+    <Content Include="PortalGetListc.aspx" />
+    <Content Include="PortalGetList.aspx" />
+    <Content Include="PortalGetListContentRedeem.aspx" />
+    <Content Include="PortalGetListMerchantAccountTransaction.aspx" />
+    <Content Include="PortalGetListMPOSActivity.aspx" />
+    <Content Include="PortalGetListPaymentGateway.aspx" />
+    <Content Include="PortalGetListServiceIntegration.aspx" />
+    <Content Include="PortalReportAvailable.aspx" />
+    <Content Include="MposMerchantActivity.aspx" />
+    <Content Include="powered.jpg" />
+    <Content Include="SupplyOrder.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="UploadBulkPaymentFile.aspx.cs">
+      <DependentUpon>UploadBulkPaymentFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UploadBulkPaymentFile.aspx.designer.cs">
+      <DependentUpon>UploadBulkPaymentFile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AboutUs.aspx.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AboutUs.aspx.designer.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AirtimeTopup.aspx.cs">
+      <DependentUpon>AirtimeTopup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AirtimeTopup.aspx.designer.cs">
+      <DependentUpon>AirtimeTopup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AmoleServiceIntergrationLogReport.aspx.cs">
+      <DependentUpon>AmoleServiceIntergrationLogReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AmoleServiceIntergrationLogReport.aspx.designer.cs">
+      <DependentUpon>AmoleServiceIntergrationLogReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CanalPlusPayments.aspx.cs">
+      <DependentUpon>CanalPlusPayments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CanalPlusPayments.aspx.designer.cs">
+      <DependentUpon>CanalPlusPayments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CanalPlusTransactionLogReport1.cs">
+      <DependentUpon>CanalPlusTransactionLogReport1.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CustomerLookupReport.aspx.cs">
+      <DependentUpon>CustomerLookupReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerLookupReport.aspx.designer.cs">
+      <DependentUpon>CustomerLookupReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerAccountStatement.aspx.cs">
+      <DependentUpon>CustomerAccountStatement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerAccountStatement.aspx.designer.cs">
+      <DependentUpon>CustomerAccountStatement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerLookupReport1.cs">
+      <DependentUpon>CustomerLookupReport1.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="DSTVPaymentsReport.aspx.cs">
+      <DependentUpon>DSTVPaymentsReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DSTVPaymentsReport.aspx.designer.cs">
+      <DependentUpon>DSTVPaymentsReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DstvPaymentsReport.cs">
+      <DependentUpon>DstvPaymentsReport.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="GESAccountBalance.aspx.cs">
+      <DependentUpon>GESAccountBalance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GESAccountBalance.aspx.designer.cs">
+      <DependentUpon>GESAccountBalance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerAccountStatement1.cs">
+      <DependentUpon>CustomerAccountStatement1.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="ICSAccountBalance.aspx.cs">
+      <DependentUpon>ICSAccountBalance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ICSAccountBalance.aspx.designer.cs">
+      <DependentUpon>ICSAccountBalance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FieldAgentsActiveInactiveReports.aspx.cs">
+      <DependentUpon>FieldAgentsActiveInactiveReports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FieldAgentsActiveInactiveReports.aspx.designer.cs">
+      <DependentUpon>FieldAgentsActiveInactiveReports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AmoleAgentActivityForFieldAgentsReport.aspx.cs">
+      <DependentUpon>AmoleAgentActivityForFieldAgentsReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AmoleAgentActivityForFieldAgentsReport.aspx.designer.cs">
+      <DependentUpon>AmoleAgentActivityForFieldAgentsReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AmoleAgentActivityForFieldAgentsReport1.cs">
+      <DependentUpon>AmoleAgentActivityForFieldAgentsReport1.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FieldAgentSalesReport1.cs">
+      <DependentUpon>FieldAgentSalesReport1.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FieldAgentSalesReport.aspx.cs">
+      <DependentUpon>FieldAgentSalesReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FieldAgentSalesReport.aspx.designer.cs">
+      <DependentUpon>FieldAgentSalesReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="helpDeskRP.aspx.cs">
+      <DependentUpon>helpDeskRP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="helpDeskRP.aspx.designer.cs">
+      <DependentUpon>helpDeskRP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FieldAgentsActiveInactiveReport1.cs">
+      <DependentUpon>FieldAgentsActiveInactiveReport1.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GESAccountBalance1.cs">
+      <DependentUpon>GESAccountBalance1.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="ICSAccountBalance1.cs">
+      <DependentUpon>ICSAccountBalance1.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="PortalGetListCustomerLookupReport.aspx.cs">
+      <DependentUpon>PortalGetListCustomerLookupReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PortalGetListCustomerLookupReport.aspx.designer.cs">
+      <DependentUpon>PortalGetListCustomerLookupReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PortalGetListAmoleAgentActivityForFieldAgentsReport.aspx.cs">
+      <DependentUpon>PortalGetListAmoleAgentActivityForFieldAgentsReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PortalGetListAmoleAgentActivityForFieldAgentsReport.aspx.designer.cs">
+      <DependentUpon>PortalGetListAmoleAgentActivityForFieldAgentsReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PortalGetListCanalPlusTransactionLogReport.aspx.cs">
+      <DependentUpon>PortalGetListCanalPlusTransactionLogReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PortalGetListCanalPlusTransactionLogReport.aspx.designer.cs">
+      <DependentUpon>PortalGetListCanalPlusTransactionLogReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PortalGetListDSTVPaymentsReport.aspx.cs">
+      <DependentUpon>PortalGetListDSTVPaymentsReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PortalGetListDSTVPaymentsReport.aspx.designer.cs">
+      <DependentUpon>PortalGetListDSTVPaymentsReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PortalGetListGESAccountBalance.aspx.cs">
+      <DependentUpon>PortalGetListGESAccountBalance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PortalGetListGESAccountBalance.aspx.designer.cs">
+      <DependentUpon>PortalGetListGESAccountBalance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PortalGetListICSAccountBalance.aspx.cs">
+      <DependentUpon>PortalGetListICSAccountBalance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PortalGetListICSAccountBalance.aspx.designer.cs">
+      <DependentUpon>PortalGetListICSAccountBalance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PortalGetListDSTVTransactionLogReport.aspx.cs">
+      <DependentUpon>PortalGetListDSTVTransactionLogReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PortalGetListDSTVTransactionLogReport.aspx.designer.cs">
+      <DependentUpon>PortalGetListDSTVTransactionLogReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PortalGetListFieldAgentActiveInactiveReport1.aspx.cs">
+      <DependentUpon>PortalGetListFieldAgentActiveInactiveReport1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PortalGetListFieldAgentActiveInactiveReport1.aspx.designer.cs">
+      <DependentUpon>PortalGetListFieldAgentActiveInactiveReport1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PortalGetListFieldAgentSalesReport.aspx.cs">
+      <DependentUpon>PortalGetListFieldAgentSalesReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PortalGetListFieldAgentSalesReport.aspx.designer.cs">
+      <DependentUpon>PortalGetListFieldAgentSalesReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PortalGetListFieldAgentsActiveInactiveReport.aspx.cs">
+      <DependentUpon>PortalGetListFieldAgentsActiveInactiveReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PortalGetListFieldAgentsActiveInactiveReport.aspx.designer.cs">
+      <DependentUpon>PortalGetListFieldAgentsActiveInactiveReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PortalGetListRemittanceSettlementReport.aspx.cs">
+      <DependentUpon>PortalGetListRemittanceSettlementReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PortalGetListRemittanceSettlementReport.aspx.designer.cs">
+      <DependentUpon>PortalGetListRemittanceSettlementReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PortalGetListAccountStatement.aspx.cs">
+      <DependentUpon>PortalGetListAccountStatement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PortalGetListAccountStatement.aspx.designer.cs">
+      <DependentUpon>PortalGetListAccountStatement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RemittanceSettlementReport.aspx.cs">
+      <DependentUpon>RemittanceSettlementReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RemittanceSettlementReport.aspx.designer.cs">
+      <DependentUpon>RemittanceSettlementReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RemittanceSettlementReport1.cs">
+      <DependentUpon>RemittanceSettlementReport1.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RemittanceSuspenseAccountReport1.cs">
+      <DependentUpon>RemittanceSuspenseAccountReport1.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PortalGetListRemittanceSuspenseAccountReport.aspx.cs">
+      <DependentUpon>PortalGetListRemittanceSuspenseAccountReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PortalGetListRemittanceSuspenseAccountReport.aspx.designer.cs">
+      <DependentUpon>PortalGetListRemittanceSuspenseAccountReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RemittanceSuspenseAccountReport.aspx.cs">
+      <DependentUpon>RemittanceSuspenseAccountReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RemittanceSuspenseAccountReport.aspx.designer.cs">
+      <DependentUpon>RemittanceSuspenseAccountReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProfileUpdate.aspx.cs">
+      <DependentUpon>ProfileUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProfileUpdate.aspx.designer.cs">
+      <DependentUpon>ProfileUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContentSalesDetailReport1.cs">
+      <DependentUpon>ContentSalesDetailReport1.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ContentSales.aspx.cs">
+      <DependentUpon>ContentSales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContentSales.aspx.designer.cs">
+      <DependentUpon>ContentSales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContentRedeem.aspx.cs">
+      <DependentUpon>ContentRedeem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContentRedeem.aspx.designer.cs">
+      <DependentUpon>ContentRedeem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContentRedeemReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ContentRedeemReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ContentSales.cs">
+      <DependentUpon>ContentSales.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AirtimeTopup.cs">
+      <DependentUpon>AirtimeTopup.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomerLookup.aspx.cs">
+      <DependentUpon>CustomerLookup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerLookup.aspx.designer.cs">
+      <DependentUpon>CustomerLookup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DSTVTransactionLogReport.aspx.cs">
+      <DependentUpon>DSTVTransactionLogReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DSTVTransactionLogReport.aspx.designer.cs">
+      <DependentUpon>DSTVTransactionLogReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DstvTransactionLogReport11.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DstvTransactionLogReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EthAirlinesPayment.cs">
+      <DependentUpon>EthAirlinesPayment.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="dstv.aspx.cs">
+      <DependentUpon>dstv.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dstv.aspx.designer.cs">
+      <DependentUpon>dstv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EthAirlinesReservation.aspx.cs">
+      <DependentUpon>EthAirlinesReservation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EthAirlinesReservation.aspx.designer.cs">
+      <DependentUpon>EthAirlinesReservation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ResetPassword.aspx.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResetPassword.aspx.designer.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ForcePasswordChange.aspx.cs">
+      <DependentUpon>ForcePasswordChange.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ForcePasswordChange.aspx.designer.cs">
+      <DependentUpon>ForcePasswordChange.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="GridViewGroup.cs" />
+    <Compile Include="GridViewGroupList.cs" />
+    <Compile Include="GridViewHelper.cs" />
+    <Compile Include="GridViewHelperSample.aspx.cs">
+      <DependentUpon>GridViewHelperSample.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GridViewHelperSample.aspx.designer.cs">
+      <DependentUpon>GridViewHelperSample.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GridViewSummary.cs" />
+    <Compile Include="GridViewSummaryList.cs" />
+    <Compile Include="Dstv.cs">
+      <DependentUpon>Dstv.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="helpDeskc.aspx.cs">
+      <DependentUpon>helpDeskc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="helpDeskc.aspx.designer.cs">
+      <DependentUpon>helpDeskc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="helpDesk.aspx.cs">
+      <DependentUpon>helpDesk.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="helpDesk.aspx.designer.cs">
+      <DependentUpon>helpDesk.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AmolePaymentGatewayLogReport.cs">
+      <DependentUpon>AmolePaymentGatewayLogReport.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AmolePaymentGatewayLogReport1.aspx.cs">
+      <DependentUpon>AmolePaymentGatewayLogReport1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AmolePaymentGatewayLogReport1.aspx.designer.cs">
+      <DependentUpon>AmolePaymentGatewayLogReport1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MerchantAccTransactionsReport.aspx.cs">
+      <DependentUpon>MerchantAccTransactionsReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MerchantAccTransactionsReport.aspx.designer.cs">
+      <DependentUpon>MerchantAccTransactionsReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MerchantAccTransactionsReport1.cs">
+      <DependentUpon>MerchantAccTransactionsReport1.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AmoleServiceIntegrationLogReport1.cs">
+      <DependentUpon>AmoleServiceIntegrationLogReport1.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ContentSalesDetailReport.aspx.cs">
+      <DependentUpon>ContentSalesDetailReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContentSalesDetailReport.aspx.designer.cs">
+      <DependentUpon>ContentSalesDetailReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="mPOSActivity2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>mPOSActivity2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MPOSMerchantActivity.cs">
+      <DependentUpon>MPOSMerchantActivity.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PrintReceiptCheckStatus.aspx.cs">
+      <DependentUpon>PrintReceiptCheckStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PrintReceiptCheckStatus.aspx.designer.cs">
+      <DependentUpon>PrintReceiptCheckStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RemittanceCheckStatus.aspx.cs">
+      <DependentUpon>RemittanceCheckStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RemittanceCheckStatus.aspx.designer.cs">
+      <DependentUpon>RemittanceCheckStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReprintReceipt.aspx.cs">
+      <DependentUpon>ReprintReceipt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReprintReceipt.aspx.designer.cs">
+      <DependentUpon>ReprintReceipt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RemittanceReprintReceipt.aspx.cs">
+      <DependentUpon>RemittanceReprintReceipt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RemittanceReprintReceipt.aspx.designer.cs">
+      <DependentUpon>RemittanceReprintReceipt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PortalRemittanceCashOut.aspx.cs">
+      <DependentUpon>PortalRemittanceCashOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PortalRemittanceCashOut.aspx.designer.cs">
+      <DependentUpon>PortalRemittanceCashOut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PrintReceipt.aspx.cs">
+      <DependentUpon>PrintReceipt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PrintReceipt.aspx.designer.cs">
+      <DependentUpon>PrintReceipt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RemittanceReport.aspx.cs">
+      <DependentUpon>RemittanceReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RemittanceReport.aspx.designer.cs">
+      <DependentUpon>RemittanceReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RemittanceReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RemittanceReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PortalGetListc.aspx.cs">
+      <DependentUpon>PortalGetListc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PortalGetListc.aspx.designer.cs">
+      <DependentUpon>PortalGetListc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PortalGetList.aspx.cs">
+      <DependentUpon>PortalGetList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PortalGetList.aspx.designer.cs">
+      <DependentUpon>PortalGetList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PortalGetListContentRedeem.aspx.cs">
+      <DependentUpon>PortalGetListContentRedeem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PortalGetListContentRedeem.aspx.designer.cs">
+      <DependentUpon>PortalGetListContentRedeem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PortalGetListMerchantAccountTransaction.aspx.cs">
+      <DependentUpon>PortalGetListMerchantAccountTransaction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PortalGetListMerchantAccountTransaction.aspx.designer.cs">
+      <DependentUpon>PortalGetListMerchantAccountTransaction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PortalGetListContentSalesDetailReport.aspx.cs">
+      <DependentUpon>PortalGetListContentSalesDetailReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PortalGetListContentSalesDetailReport.aspx.designer.cs">
+      <DependentUpon>PortalGetListContentSalesDetailReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PortalGetListRemittanceReport.aspx.cs">
+      <DependentUpon>PortalGetListRemittanceReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PortalGetListRemittanceReport.aspx.designer.cs">
+      <DependentUpon>PortalGetListRemittanceReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PortalGetListMPOSActivity.aspx.cs">
+      <DependentUpon>PortalGetListMPOSActivity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PortalGetListMPOSActivity.aspx.designer.cs">
+      <DependentUpon>PortalGetListMPOSActivity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PortalGetListPaymentGateway.aspx.cs">
+      <DependentUpon>PortalGetListPaymentGateway.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PortalGetListPaymentGateway.aspx.designer.cs">
+      <DependentUpon>PortalGetListPaymentGateway.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PortalGetListServiceIntegration.aspx.cs">
+      <DependentUpon>PortalGetListServiceIntegration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PortalGetListServiceIntegration.aspx.designer.cs">
+      <DependentUpon>PortalGetListServiceIntegration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PortalReportAvailable.aspx.cs">
+      <DependentUpon>PortalReportAvailable.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PortalReportAvailable.aspx.designer.cs">
+      <DependentUpon>PortalReportAvailable.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MposMerchantActivity.aspx.cs">
+      <DependentUpon>MposMerchantActivity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MposMerchantActivity.aspx.designer.cs">
+      <DependentUpon>MposMerchantActivity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SupplyOrder.aspx.cs">
+      <DependentUpon>SupplyOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SupplyOrder.aspx.designer.cs">
+      <DependentUpon>SupplyOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Images\" />
+    <Folder Include="Models\" />
+    <Folder Include="Photo\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ContentSalesDetailReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ContentSalesDetailReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContentRedeemReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ContentRedeemReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContentSales.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ContentSales.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AirtimeTopup.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AirtimeTopup.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CanalPlusTransactionLogReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CanalPlusTransactionLogReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerLookupReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CustomerLookupReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DstvPaymentsReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DstvPaymentsReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DstvTransactionLogReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DstvTransactionLogReport11.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EthAirlinesPayment.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>EthAirlinesPayment.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dstv.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Dstv.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AmolePaymentGatewayLogReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AmolePaymentGatewayLogReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AmoleAgentActivityForFieldAgentsReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AmoleAgentActivityForFieldAgentsReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FieldAgentSalesReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>FieldAgentSalesReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FieldAgentsActiveInactiveReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>FieldAgentsActiveInactiveReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerAccountStatement1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CustomerAccountStatement1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GESAccountBalance1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>GESAccountBalance1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ICSAccountBalance1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ICSAccountBalance1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RemittanceSettlementReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RemittanceSettlementReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RemittanceSuspenseAccountReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RemittanceSuspenseAccountReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MerchantAccTransactionsReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MerchantAccTransactionsReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AmoleServiceIntegrationLogReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AmoleServiceIntegrationLogReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mPOSActivity2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>mPOSActivity2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MPOSMerchantActivity.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MPOSMerchantActivity.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RemittanceReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RemittanceReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report1.rdlc" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>26924</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:26924/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\ReportPortal.Client.3.0.2\build\net45\ReportPortal.Client.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\ReportPortal.Client.3.0.2\build\net45\ReportPortal.Client.targets'))" />
+    <Error Condition="!Exists('..\packages\ReportPortal.Shared.3.0.2\build\net45\ReportPortal.Shared.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\ReportPortal.Shared.3.0.2\build\net45\ReportPortal.Shared.targets'))" />
+  </Target>
+  <Import Project="..\packages\ReportPortal.Client.3.0.2\build\net45\ReportPortal.Client.targets" Condition="Exists('..\packages\ReportPortal.Client.3.0.2\build\net45\ReportPortal.Client.targets')" />
+  <Import Project="..\packages\ReportPortal.Shared.3.0.2\build\net45\ReportPortal.Shared.targets" Condition="Exists('..\packages\ReportPortal.Shared.3.0.2\build\net45\ReportPortal.Shared.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

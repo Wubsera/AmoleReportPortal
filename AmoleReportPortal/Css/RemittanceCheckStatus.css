@@ -1,0 +1,311 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Calibri;
+    height: auto;
+}
+.table1{
+        background-color: #FDDB00;
+        height:85px;
+        position:absolute;
+        float:left;
+        margin-top:0;
+        width:100%;
+}
+
+.table1 img{
+    width:90px;
+    margin-top:5px;
+}
+.table1 .left img{
+    float:left;
+}
+.table1 .left section{
+    float:left;
+    margin-left:5px;
+}
+.table1 .left section h1{
+    font-size:24pt;
+    color:darkblue;
+}
+.table1 .left section h2,h3{
+    font-size:14pt;
+}
+.table1 .right{
+    right:0;
+    position:absolute;
+    text-align:right;
+    width:100%;
+
+}
+
+.table1 .right img{
+    float:right;
+        right:0;
+}
+
+.table1 .right section{
+    font-size:12pt;
+    font-weight:bold;
+    text-align:right;
+}
+
+.table2{
+        background-color: #005CB7;
+        position:absolute;
+        width:100%;
+        color:white;
+        height:30px;
+        margin-top:85px;
+ 
+}
+.table2 .left{
+    float: left; 
+
+
+}
+
+.table2 .left span{
+    font-size:18pt;
+    font-weight:bold;
+    padding-left:25px;
+}
+
+.table2 .right{
+    float: right;
+    padding-top:5px;
+}
+
+.table2 .right span a{
+    color:white;
+    font-size:12pt;
+    font-weight:bold;
+}
+.goback{
+    margin:15px 0 0px 25px;
+    position:absolute;
+     margin-top:125px;
+
+}
+.goback a{
+    color:blue;
+    font-weight:bold;
+
+}
+.form .main-menu{
+    position:absolute;
+    margin-top:170px
+
+}
+    .form .menu {
+        margin-left: 25px;
+        font-weight: bold;
+        font-size: 12pt;
+        margin-top:-15px;
+        margin-bottom: 15px;
+    }
+    .form .menu .search {
+            font-weight: bold;
+            font-size: 12pt;
+            margin: 0 5px 0 5px;
+            padding: 2px 2px 2px 2px;
+            background-color: #fefbf7;
+        }
+        
+
+        .form .menu .search-button {
+            font-weight: bold;
+            font-size: 12pt;
+            color: white;
+            width: 85px;
+            margin: 0 5px 0 5px;
+            padding: 2px 2px 2px 2px;
+            background-color: #4169E1;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+
+        .release{
+    margin-left:25px;
+    width:900px;
+}
+
+.label2{
+    float:left;
+    color:red;
+    font-weight:bold;
+    margin-left:25px;
+    margin-top:1px;
+}
+.left-menu {
+    float: left;
+    width: 400px;
+    margin-right:25px;
+}
+
+
+    .left-menu section {
+        font-family: Calibri;
+        font-size: 12pt;
+    }
+
+.right-menu {
+    float: left;
+    width: 400px;
+    position: relative;
+}
+ 
+
+    .right-menu section {
+        font-family: Calibri;
+        font-size: 12pt;
+    }
+    .release .left-top{
+        border:1px solid;
+        padding-left:2px;
+        padding-right:2px;
+    }
+    .release .left-bottom{
+        border:1px solid;
+        padding-left:2px;
+        padding-right:2px;
+    }
+.release-cash {
+    float:left;
+    width:100px;
+    margin-top:2%;
+    margin-left:25px;
+ 
+}
+
+
+.release-cash .release-button {
+    background-color: #4169E1;
+    color:white;
+    font-weight:bold;
+    font-family:Calibri;
+    font-size:16pt;
+    cursor:pointer;
+    width:150px;
+    border-radius:4px;
+    float:left;
+}
+.Receipt{
+    margin-left:25px;
+    margin-top:1px;
+    width:620px;
+    
+
+}
+.Receipt .left-receipt{
+    float: left;
+    width:300px;
+
+}
+
+.Receipt .right-receipt{
+    float: right;
+    width:300px;
+    margin-bottom:25px;
+}
+
+.sender-info {
+    width: 620px;
+    float: left;
+    /*position:absolute;*/
+    /*margin-top:100px;*/
+    margin-left:25px;
+
+}
+
+    .sender-info .sender{
+    float: left;
+    width:300px;
+    margin-top:-10px;
+
+}
+
+.sender-info .sender h4{
+    margin-bottom:0;
+
+}
+
+.sender-info .beneficiary{
+     float: right;
+    width:300px;
+    margin-top:-10px;
+    margin-bottom:25px;
+}
+.sender-info .beneficiary h4{
+    margin-bottom:0;
+
+}
+  
+.print{
+    margin-left:25px;
+    /*margin-top:25px;*/
+   /*float:left;*/
+   width:650px;
+   /*position:absolute;*/
+   /*margin-top:350px;*/
+}
+.print .print-button{
+    width:150px;
+    background-color:#4169E1;
+    color:white;
+    font-family:Calibri;
+    font-weight:bold;
+    font-size:16pt;
+    cursor:pointer;
+    margin-right:15px;
+}
+.print .done{
+    width:100px;
+    background-color:#4169E1;
+    color:white;
+    font-family:Calibri;
+    font-weight:bold;
+    font-size:16pt;
+    cursor:pointer;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    color: blue;
+    font-style: italic;
+    font-size: 10pt;
+    width: 50%;
+}
+
+@media screen and (max-width:840px){
+    body{
+    width:925px;
+}
+    .table1{
+        width:925px;
+    }
+    .table1 .left section h1{
+        font-size:18pt;
+        padding-bottom:13px;
+        padding-top:3px;
+    }
+    .table1 .left section h2,h3{
+        font-size:13pt;
+    }
+    .table1 .left section h2{
+        padding-bottom:4px;
+    }
+
+    .table2{
+       width:925px;
+    }
+    
+}
+@media screen and (max-height:780px){
+.footer{
+    display:none;
+    
+}
+}
+
+

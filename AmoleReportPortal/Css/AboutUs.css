@@ -1,0 +1,147 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Calibri;
+    height: auto;
+}
+.table1{
+        background-color: #FDDB00;
+        height:85px;
+        position:absolute;
+        float:left;
+        margin-top:0;
+        width:100%;
+}
+
+.table1 img{
+    width:90px;
+    margin-top:5px;
+}
+.table1 .left img{
+    float:left;
+}
+.table1 .left section{
+    float:left;
+    margin-left:5px;
+}
+.table1 .left section h1{
+    font-size:24pt;
+    color:darkblue;
+}
+.table1 .left section h2,h3{
+    font-size:14pt;
+}
+.table1 .right{
+    right:0;
+    position:absolute;
+    text-align:right;
+    width:100%;
+
+}
+
+.table1 .right img{
+    float:right;
+        right:0;
+}
+
+.table1 .right section{
+    font-size:12pt;
+    font-weight:bold;
+    text-align:right;
+}
+
+.table2{
+        background-color: #005CB7;
+        position:absolute;
+        width:100%;
+        color:white;
+        height:30px;
+        margin-top:85px;
+ 
+}
+.table2 .left{
+    float: left; 
+
+
+}
+
+.table2 .left span{
+    font-size:18pt;
+    font-weight:bold;
+    padding-left:25px;
+}
+
+.table2 .right{
+    float: right;
+    padding-top:5px;
+}
+
+.table2 .right span a{
+    color:white;
+    font-size:12pt;
+    font-weight:bold;
+}
+.goback{
+    margin:120px 0 0 25px;
+    position:absolute;
+}
+.goback a{
+    color:blue;
+    font-weight:bold;
+
+}
+.menu{
+    position:absolute;
+    margin-top:145px;
+
+}
+.menu .box1{
+    float:left;
+    margin-left:25px;
+    margin-right:25px;
+}
+.menu .box2{
+    float:left;
+}
+.menu .box2 .join_us img{
+    margin-top:-15px;
+    width:40px;
+    margin-right:5px;
+}
+.footer {
+    position:fixed;
+    left:0;
+    bottom:0;
+}
+@media screen and (max-width:840px){
+    body{
+    width:840px;
+}
+    .table1{
+        width:840px;
+    }
+    .table1 .left section h1{
+        font-size:18pt;
+        padding-bottom:13px;
+        padding-top:3px;
+    }
+    .table1 .left section h2,h3{
+        font-size:13pt;
+    }
+    .table1 .left section h2{
+        padding-bottom:4px;
+    }
+
+    .table2{
+       width:840px;
+    }
+    .menu{
+width:840px;
+    }
+}
+@media screen and (max-height:780px){
+.footer{
+    display:none;
+    
+}
+}

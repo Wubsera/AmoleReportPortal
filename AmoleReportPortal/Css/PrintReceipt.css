@@ -1,0 +1,315 @@
+﻿body {
+    padding: 0;
+    margin: 0;
+    font-family: Calibri;
+    background-color: white;
+}
+
+.print-receipt {
+    font-family: Calibri;
+    background-color: white;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+
+    .print-receipt .print-header {
+        width: 100%;
+        font-size: 12pt;
+        display: flex;
+
+    }
+
+        .print-receipt .print-header .print-header-left {
+            width: 50%;
+            float: left;
+            border-bottom: 1.5px solid #931a1a;
+            border-bottom-color: maroon;
+        }
+
+            .print-receipt .print-header .print-header-left section h2 {
+                margin-bottom: -5px;
+                color: darkblue;
+            }
+
+        .print-receipt .print-header .print-header-right {
+            width: 50%;
+            float: left;
+            border-bottom: 1.5px solid #931a1a;
+        }
+
+            .print-receipt .print-header .print-header-right section {
+                text-align: right;
+                
+            }
+
+                .print-receipt .print-header .print-header-right section .imagebutton {
+                    float: right;
+                    padding-top: 5px;
+                }
+
+                .print-receipt .print-header .print-header-right section h4 {
+                    margin-top: 62px;
+                    margin-bottom: 0;
+                    text-align: right;
+                }
+
+    .print-receipt .body {
+        width: 100%;
+        font-size: 12pt;
+        display: flex;
+        margin-top:12px;
+    }
+
+        .print-receipt .body .body-left {
+            width: 50%;
+            float: left;
+        }
+
+        .print-receipt .body .body-right {
+            width: 50%;
+            float: left;
+        }
+
+            .print-receipt .body .body-right section {
+                text-align: right;
+                padding-right:10%;
+            }
+
+    .print-receipt .footer {
+        width: 100%;
+        display: flex;
+        font-size: 12pt;
+        margin-top:-13px;
+    }
+
+        .print-receipt .footer .sender {
+            width: 50%;
+            float: left;
+        }
+
+            .print-receipt .footer .sender h4 {
+                font-weight: bold;
+                border-bottom: 1px solid;
+                width: 90%;
+                margin-bottom: 0;
+            }
+
+        .print-receipt .footer .beneficiary {
+            width: 50%;
+            float: left;
+        }
+
+            .print-receipt .footer .beneficiary h4 {
+                font-weight: bold;
+                border-bottom: 1px solid;
+                width: 95%;
+                margin-bottom: 0;
+            }
+.review{
+    width:100%;
+    display:flex;
+    margin-top:10%;
+    margin-right:10%;
+}
+.review .processed{
+    width:50%;
+    float:left;
+    margin-right:25px;
+}
+ .review .processed section{
+    width:90%;
+   padding-top:5%;
+    padding-left:10%;
+}
+  .review .processed section p{
+
+   padding-top:-15%;
+   border-top:1px solid;
+    text-align:left;
+    padding-left:5px;
+   
+
+
+}
+.review .approved{
+    width:50%;
+    float:left;
+
+}
+ .review .approved section{
+    width:100%;
+   padding-top:5%;
+}
+  .review .approved section p{
+
+   padding-top:-15%;
+   border-top:1px solid;
+   width:50%;
+   padding-left:5px;
+
+}
+
+    .print-receipt .image {
+        width: 98%;
+        display: flex;
+        font-size: 12pt;
+        padding: 25px 0 0px 0;
+        border-bottom: 1.5px solid;
+        border-bottom-color: maroon;
+        position: absolute;
+        bottom: 2%;
+    }
+
+        .print-receipt .image .logo {
+            width: 40%;
+            float: left;
+        }
+
+        .print-receipt .image .para {
+            width: 50%;
+            float: left;
+        }
+
+        .print-receipt .image .logo img {
+            width: 60px;
+            float: right;
+            padding-right:5px;
+        }
+
+        .print-receipt .image .para p {
+            width: 60%;
+            margin-bottom: 5px;
+        }
+
+    .print-receipt .private {
+        width: 98%;
+        margin-top: 3%;
+        font-size: 8pt;
+        font-family: Calibri;
+        display: flex;
+        position: absolute;
+        bottom: 0;
+    }
+
+        .print-receipt .private .conf {
+            width: 40%;
+            float: left;
+        }
+
+        .print-receipt .private .date {
+            width: 40%;
+            float: left;
+        }
+
+        .print-receipt .private .page {
+            width: 20%;
+            float: left;
+            text-align: right;
+            padding-right: 25px;
+        }
+
+@media screen and (max-width:1410px) {
+    .print-receipt .image .para p {
+        width: 65%;
+        margin-bottom: 5px;
+    }
+}
+
+@media screen and (max-width:1292px) {
+    .print-receipt .image .para p {
+        width: 70%;
+        margin-bottom: 5px;
+    }
+}
+
+@media screen and (max-width:1202px) {
+    .print-receipt .image .para p {
+        width: 75%;
+        margin-bottom: 5px;
+    }
+}
+
+@media screen and (max-width:1182px) {
+    .print-receipt {
+        width: 60%;
+    }
+
+        .print-receipt .image .para p {
+            width: 70%;
+            margin-bottom: 5px;
+        }
+}
+
+@media screen and (max-width:806px) {
+    .print-receipt {
+        width: 65%;
+    }
+
+        .print-receipt .image .para p {
+            width: 70%;
+            margin-bottom: 5px;
+        }
+}
+
+@media screen and (max-width:746px) {
+    .print-receipt {
+        width: 72%;
+    }
+
+        .print-receipt .image .para p {
+            width: 75%;
+            margin-bottom: 5px;
+        }
+}
+
+@media screen and (max-width:630px) {
+    .print-receipt {
+        margin: 5%;
+        width: 80%;
+    }
+
+        .print-receipt .image .para p {
+            width: 75%;
+            margin-bottom: 5px;
+        }
+}
+
+@media screen and (max-width:580px) {
+    .print-receipt {
+        margin: 2%;
+        width: 87%;
+    }
+
+        .print-receipt .image .para p {
+            width: 75%;
+            margin-bottom: 5px;
+        }
+}
+
+@media screen and (max-width:530px) {
+    .print-receipt .print .print-r {
+        width: 100%;
+        float: left;
+        position: relative;
+        margin-right: 10px;
+    }
+
+    .print-receipt .print .print-b {
+        width: 100%;
+        position: relative;
+    }
+
+    .print-receipt .image .para p {
+        width: 85%;
+        margin-bottom: 5px;
+    }
+
+    .print-receipt .print .print-r .print-button {
+        float: left;
+    }
+
+    .print-receipt .print .print-b .print-back {
+        float: right;
+    }
+}

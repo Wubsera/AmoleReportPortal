@@ -1,0 +1,532 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Calibri;
+    height: auto;
+}
+
+.table1 {
+    background-color: #FDDB00;
+    height: 80px;
+}
+
+    .table1 img {
+        width: 90px;
+    }
+
+    .table1 .left img {
+        float: left;
+    }
+
+    .table1 .left section {
+        float: left;
+        margin-left: 5px;
+        margin-top: -28px;
+    }
+
+
+        .table1 .left section h1 {
+            font-size: 24pt;
+            color: darkblue;
+            margin-bottom: -16px;
+        }
+
+        .table1 .left section h2 {
+            margin-bottom: -22px;
+        }
+
+        .table1 .left section h2, h3 {
+            font-size: 14pt;
+        }
+
+    .table1 .right img {
+        float: right;
+        right: 0;
+    }
+
+    .table1 .right h1 {
+        float: right;
+        font-size: 15.5pt;
+        font-weight: bold;
+        text-align: right;
+        margin-top: 9px;
+    }
+
+    .table1 .right span {
+        float: right;
+        font-size: 12pt;
+        font-weight: bold;
+        text-align: right;
+        margin-top: 39px;
+        margin-right: -189px;
+    }
+
+    .table1 .right h2 {
+        float: right;
+        font-size: 10pt;
+        font-weight: bold;
+        text-align: right;
+        margin-top: 62px;
+        margin-right: -306px;
+    }
+
+.table2 {
+    background-color: #005CB7;
+    height: 30px;
+    margin-left: 0;
+}
+
+    .table2 .left {
+        float: left;
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+        .table2 .left span {
+            color: white;
+            padding-left: 0;
+            margin-left: -400px;
+            text-align: left;
+            font-size: 18pt;
+            font-weight: bold;
+        }
+
+    .table2 .right {
+        float: right;
+        margin-top: 5px;
+        color: white;
+        padding-left: 0;
+        text-align: right;
+        font-size: 12pt;
+        font-family: Calibri;
+        font-weight: bold;
+    }
+        .table2 .right a {
+            color: white;
+            padding-left: 0;
+            text-align: right;
+            font-size: 12pt;
+            font-family: Calibri;
+            font-weight: bold;
+            margin-right: 6px;
+            padding-top: -5px;
+        }
+.goback{
+    margin:25px 0 10px 25px;
+}
+.goback a{
+    color:blue;
+    font-weight:bold;
+
+}
+.panel {
+    margin-left: 25px;
+    background-color: white;
+    width: 800px;
+}
+
+
+.panel1 {
+    background-color: white;
+    border: solid 0.5px #686868;
+    width: 25%;
+    padding: 0 1em 1em 2em;
+}
+
+    .panel1 .success {
+        width: 100%;
+    }
+
+        .panel1 .success img {
+            float: left;
+            margin-top: 0.4em;
+            float: left;
+        }
+
+        .panel1 .success h2 {
+            font-family: Calibri;
+            font-weight: bold;
+            font-size: 16pt;
+            float: left;
+            margin-bottom: 1em;
+        }
+
+    .panel1 .label2 {
+        font-family: Calibri;
+        font-weight: bold;
+        font-size: 20pt;
+        color: blue;
+        margin-left: 27%;
+    }
+
+    .panel1 p {
+        font-family: Calibri;
+        font-size: 11pt;
+        width: 97%;
+    }
+
+    .panel1 .button {
+        font-family: Calibri;
+        font-size: 16pt;
+        background-color: blue;
+        color: white;
+        margin-left: 27%;
+        margin-top: 1em;
+        cursor: pointer;
+        font-weight: bold;
+        padding: 0.2em 1em 0.2em 1em;
+    }
+
+.Box {
+    width: 97%;
+    display: flex;
+}
+
+.box1 {
+    width: 48%;
+    float: left;
+    margin: 1em 0 0.5em 0px;
+    background-color: #f1fcfe;
+    border: solid 0.1px #d2d6d7;
+}
+
+    .box1 h2 {
+        color: blue;
+        margin-top: 0;
+        margin-left: 0.5em;
+        font-family: Calibri;
+        font-size: 13pt;
+        font-weight: normal;
+    }
+
+    .box1 input {
+        padding: 0.2em 1em 0.2em 0.5em;
+        margin-bottom: .5em;
+        font-family: Calibri;
+        font-size: 13pt;
+        font-weight: bold;
+        display: inline-block;
+        width: 80%;
+        margin-left: 1em;
+        font-weight: normal;
+    }
+
+    .box1 .DropDownList1 {
+        padding: 0.2em 0 0.2em 0;
+        margin: 0 0 0.5em 0;
+        font-family: Calibri;
+        font-size: 13pt;
+        width: 88%;
+        margin-left: 1em;
+        font-weight: normal;
+    }
+
+.box2 {
+    width: 45%;
+    background-color: #f1fcfe;
+    border: solid 0.1px #d2d6d7;
+    float: right;
+    margin: 1em 0 0.5em 25px;
+}
+
+    .box2 h2 {
+        color: blue;
+        margin-top: 0;
+        margin-left: 0.5em;
+        font-family: Calibri;
+        font-size: 13pt;
+        font-weight: normal;
+    }
+
+    .box2 h4 {
+        font-family: Calibri;
+        font-size: 13pt;
+        font-weight: bold;
+        margin-bottom: 0em;
+        margin-left: 1em;
+        font-weight: normal;
+    }
+
+    .box2 .radio {
+        clear: both;
+        font-family: Calibri;
+        font-size: 13pt;
+        font-weight: normal;
+        display: inline;
+        width: 90%;
+        margin-left: 30%;
+    }
+
+    .box2 .dropdown {
+        padding: 0.2em 0 0.2em 0;
+        margin: 0.3em 0 0.2em 0;
+        font-family: Calibri;
+        font-size: 13pt;
+        width: 88%;
+        margin-left: 1em;
+        font-weight: normal;
+    }
+
+    .box2 .input input {
+        padding: 0.2em 1em 0.2em 0.5em;
+        margin-bottom: 0.2em;
+        font-family: calibri;
+        font-size: 13pt;
+        font-weight: normal;
+        display: inline-block;
+        width: 80%;
+        margin-left: 1em;
+        margin-top: 0.2em;
+    }
+
+     .label1 {
+        margin: 0 0.2em 0.2em 1em;
+        font-family: calibri;
+        font-size: 12pt;
+        font-weight: bold;
+        color: red;
+    }
+
+.box3 {
+    border: solid 0.1px #d2d6d7;
+    background-color: #f1fcfe;
+    clear: both;
+    width: 91%;
+    position: static;
+    display: inline-block;
+    /*margin-left: 25px;*/
+    margin-bottom: 1em;
+    padding-left: 1em;
+    font-family: Calibri;
+    font-size: 13pt;
+    font-weight: normal;
+}
+
+    .box3 h2 {
+        font-family: Calibri;
+        font-size: 13pt;
+        color: #005cb7;
+        margin-top: 0.2em;
+        margin-bottom: 0.2em;
+        font-weight: normal;
+    }
+
+    .box3 .priority {
+        padding: 0.2em 0 0.2em 0;
+        font-family: Calibri;
+        font-size: 13pt;
+        width: 44%;
+        font-weight: normal;
+    }
+
+    .box3 .input input {
+        font-family: Calibri;
+        font-size: 13pt;
+        font-weight: normal;
+        width: 95%;
+        margin: 0.2em 0 0 -0.5%;
+    }
+
+    .box3 .textarea {
+        margin: 0.2em 0 0.2em 0;
+    }
+
+        .box3 .textarea textarea {
+            width: 95%;
+            height: 10em;
+            font-family: Calibri;
+            font-size: 13pt;
+            font-weight: normal;
+        }
+
+    .box3 .submit {
+        font-family: Calibri;
+        font-size: 18pt;
+        color: white;
+        font-weight: bold;
+        background-color: #005cb7;
+        cursor: pointer;
+        float: right;
+        margin-right: 1em;
+        margin-bottom: 0.5em;
+        position: static;
+    }
+
+    .box3 .cancel {
+        font-family: Calibri;
+        font-size: 18pt;
+        color: black;
+        font-weight: bold;
+        background-color: #d2d6d7;
+        cursor: pointer;
+        float: right;
+        margin-right: 1.6em;
+        margin-bottom: 0.5em;
+        position: static;
+    }
+
+@media screen and (max-width:840px){
+    body{
+    min-width:840px;
+}
+}
+@media screen and (max-height:780px){
+.footer{
+    display:none;
+    
+}
+}
+
+/*@media screen and (max-width:1117px) {
+    .form .table1 .left section {
+        font-size: 100%;
+    }
+
+    .form .table1 .right h1 {
+        width: 50%;
+    }
+
+    .form .table1 .right span {
+        width: 50%;
+    }
+
+    .form .table1 .right h2 {
+        width: 70%;
+    }
+
+    .form .panel {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width:890px) {
+    .form .table1 .left section h1 {
+        font-size: 18pt;
+        margin-bottom: 0.5em;
+        margin-top: 1.3em;
+    }
+
+    .form .table1 .left section h2 {
+        font-size: 120%;
+    }
+
+    .form .table1 .left section h3 {
+        font-size: 120%;
+    }
+
+    .form .table1 .right h1 {
+        width: 70%;
+    }
+
+    .form .table1 .right span {
+        width: 50%;
+    }
+
+    .form .table1 .right h2 {
+        width: 70%;
+    }
+
+    .form .panel {
+        width: 90%;
+        margin-left: 0;
+    }
+
+        .form .panel .panel1 {
+            padding-left: 0;
+            margin-left: 0;
+        }
+}
+
+@media screen and (max-width:789px) {
+    .form{
+
+    }
+        .form .table1 .left {
+            display: none;
+        }
+
+        .form .table1 .right {
+            width: 100%;
+        }
+
+            .form .table1 .right img {
+                float: left;
+            }
+
+            .form .table1 .right h1 {
+                text-align: right;
+            }
+
+
+            .form .table1 .right span {
+                text-align: right;
+            }
+
+            .form .table1 .right h2 {
+                text-align: right;
+            }
+
+        .form .panel {
+            width: 650px;
+            padding-left: 0;
+            margin-left: 0;
+        }
+
+            .form .panel .panel1 {
+                padding-left: 0;
+                margin-left: 0;
+            }
+}
+@media screen and (max-width:650px){
+    body{
+        overflow-x:scroll;
+    }
+    .form{
+        width:125%;
+    }
+}
+
+@media screen and (max-width:554px) {
+    .form {
+        width: 140%;
+    }
+
+        .form .table1 .left {
+            display: none;
+        }
+
+        .form .table1 .right {
+            width: 100%;
+        }
+
+            .form .table1 .right img {
+                float: left;
+            }
+
+            .form .table1 .right h1 {
+                text-align: right;
+            }
+
+
+            .form .table1 .right span {
+                text-align: right;
+            }
+
+            .form .table1 .right h2 {
+                text-align: right;
+            }
+
+        .form .table2 .right {
+            width: 50%;
+        }
+
+        .form .panel {
+            margin-left: 0;
+            width: 650px;
+        }
+
+            .form .panel .panel1 {
+                padding-left: 0;
+                margin-left: 0;
+            }
+}*/

@@ -1,0 +1,80 @@
+﻿body {
+    /*background-image:url("../Images/login.jpg");*/
+    background-repeat:no-repeat;
+    background-size:auto;
+    height: auto;
+}
+.container{
+    width:400px;
+    text-align:center;
+    background-color:white;/*change the color to white #34495E*/
+    border-radius:4px;
+    margin-top:0px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+}
+.container img{
+    width:67px;
+    margin-top:-0px;
+    margin-bottom:0px;
+    margin-right:0px;
+    height: 52px;
+    margin-left: 0px;
+}
+input[type="text"],input[type="password"] {
+    height:40px;
+    width:200px;
+    font-size:18px;
+    margin-bottom:15px;
+    color:blue;
+    padding-left:10Px;
+}
+.form-input::before{
+/*content:url(../Images/user.ico);*/
+position:absolute;
+padding-left:5px;
+padding-top:7px;
+font-size:35px;
+}
+/*.form-input:nth-child(2)::before{
+    content:url(../Images/key.ico);
+}*/
+.btn-login{
+    content:url(../Imanges/Loginf.jpg);
+    /*padding:15px 30px;
+    color:#fff;*/
+    border-radius:15px;
+    /*background-color:#15073b;
+    border-bottom:4px solid #210762;
+    height: 40px;
+    border-left-style: none;
+    border-left-color: inherit;
+    border-left-width: medium;
+    border-right-style: none;
+    border-right-color: inherit;
+    border-right-width: medium;
+    border-top-style: none;
+    border-top-color: inherit;
+    border-top-width: medium;
+    width: 146px;*/
+}
+.img-login{
+    content:url(../Imanges/Loginf.jpg);
+    /*padding:15px 30px;
+    color:#fff;*/
+    border-radius:15px;
+    /*background-color:#15073b;
+    border-bottom:4px solid #210762;
+    height: 41px;
+    border-left-style: none;
+    border-left-color: inherit;
+    border-left-width: medium;
+    border-right-style: none;
+    border-right-color: inherit;
+    border-right-width: medium;
+    border-top-style: none;
+    border-top-color: inherit;
+    border-top-width: medium;
+    width: 146px;*/
+}

@@ -1,0 +1,283 @@
+body {
+    padding: 0;
+    margin: 0;
+    width: 99.9999%;
+    font-family: Calibri;
+    height: auto;
+}
+
+.form {
+    width: 100%;
+    min-height: 100%;
+    background-color: white;
+}
+
+    .form .table1 {
+        width: 100%;
+        background-color: #FDDB00;
+        display: flex;
+    }
+
+        .form .table1 .left {
+            float: left;
+            width: 50%;
+        }
+
+            .form .table1 .left img {
+                width: 6em;
+                height: 5em;
+                float: left;
+                margin-bottom: 0;
+            }
+
+            .form .table1 .left section {
+                margin-top: -1.5em;
+                margin-left: 1em;
+                float: left;
+                font-style: italic;
+                font-weight: bold;
+                margin-bottom: 0;
+            }
+
+                .form .table1 .left section h1 {
+                    font-size: 24pt;
+                    color: darkblue;
+                    margin-bottom: 0;
+                }
+
+                .form .table1 .left section h2 {
+                    font-size: 16pt;
+                    color: black;
+                    margin-top: -0.3em;
+                }
+
+        .form .table1 section h3 {
+            font-size: 16pt;
+            color: black;
+            margin-top: -1.1em;
+            margin-bottom: 0;
+        }
+
+        .form .table1 .right {
+            float: right;
+            width: 50%;
+        }
+
+            .form .table1 .right img {
+                float: right;
+                width: 6em;
+                height: 5em;
+                margin: 0 0.2em 0 0;
+            }
+
+            .form .table1 .right h1 {
+                float: right;
+                font-size: 16pt;
+                margin-right: 0.5em;
+                width: 80%;
+                text-align: right;
+                font-weight: bolder;
+                margin-top: 0.4em;
+            }
+
+            .form .table1 .right span {
+                float: right;
+                font-size: 13pt;
+                color: blue;
+                font-weight: bold;
+                width: 80%;
+                text-align: right;
+                margin: -0.6em 0.5em 0 0;
+            }
+
+            .form .table1 .right h2 {
+                float: right;
+                font-size: 9pt;
+                color: black;
+                font-weight: bold;
+                width: 80%;
+                text-align: right;
+                margin: 0.5em 0.5em 0 0;
+            }
+
+    .form .table2 {
+        width: 100%;
+        background-color: #005CB7;
+        display: flex;
+    }
+
+        .form .table2 .left {
+            float: left;
+            width: 50%;
+            background-color: #005CB7;
+        }
+
+            .form .table2 .left span {
+                font-size: 16pt;
+                color: white;
+                font-weight: bold;
+                padding-left: 1em;
+            }
+
+        .form .table2 .right {
+            float: right;
+            text-align: right;
+            width: 50%;
+            background-color: #005CB7;
+            padding: 0.1em 0 0.1em 0;
+        }
+
+            .form .table2 .right a {
+                color: white;
+                font-size: 12pt;
+                font-weight: bold;
+                margin-right: 0.4em;
+            }
+
+
+.footer {
+    position:absolute;
+    bottom:0;
+    color: blue;
+    font-style: italic;
+    font-size: 10pt;
+    width: 50%;
+}
+
+    .form .goback {
+        margin-top: 0.5em;
+        display: block;
+        text-align: left;
+        margin-left: 1em;
+        font-size: 13pt;
+        font-weight: bold;
+    }
+
+.menu {
+    margin-left: 15%;
+}
+
+    .menu .box1 {
+        float: left;
+        margin-top: 3em;
+    }
+
+        .menu .box1 section {
+            font-size: 10pt;
+            text-align: center;
+            margin-bottom: -1em;
+        }
+
+    .menu .box2 {
+        margin-left: 1em;
+        float: left;
+        margin-top: 6em;
+    }
+
+        .menu .box2 section {
+            margin-bottom: -0.8em;
+        }
+
+        .menu .box2 h1 {
+            font-size: 16pt;
+            color: #005CB7;
+        }
+
+        .menu .box2 h2 {
+            font-size: 16pt;
+            color: #005CB7;
+        }
+
+        .menu .box2 h4 {
+            color: #005CB7;
+        }
+@media screen and (max-width:1117px){
+     .form .table1 .left section {
+        font-size: 100%;
+    }
+
+    .form .table1 .right h1 {
+        width: 50%;
+    }
+
+    .form .table1 .right span {
+        width: 50%;
+    }
+
+    .form .table1 .right h2 {
+        width: 70%;
+    }
+}
+@media screen and (max-width:893px){
+      .form .table1 .left section h1 {
+        font-size: 18pt;
+        margin-bottom: 0.5em;
+        margin-top: 1.3em;
+    }
+
+    .form .table1 .left section h2 {
+        font-size: 120%;
+    }
+
+    .form .table1 .left section h3 {
+        font-size: 120%;
+    }
+
+    .form .table1 .right h1 {
+        width: 70%;
+    }
+
+    .form .table1 .right span {
+        width: 50%;
+    }
+
+    .form .table1 .right h2 {
+        width: 70%;
+    }
+}
+@media screen and (max-width:769px) {
+    .form .table1 .left {
+        display: none;
+    }
+    .form .table1 .right {
+        width:100%;
+    }
+    .form .table1 .right img{
+        float:left;
+    }
+
+    .form .table1 .right h1 {
+       text-align:right;
+    }
+
+
+    .form .table1 .right span {
+        text-align:right;
+    }
+    .form .table1 .right h2 {
+       text-align:right;
+    }
+
+}
+@media screen and (max-width:593px){
+   .menu{
+       margin:0;
+       padding:0;
+       width:500px;
+   }
+   body{
+       overflow-x:scroll;
+   }
+   .form .table1{
+       width:110%;
+   }
+    .form .table2 {
+        width: 110%;
+    }
+}
+@media screen and (max-height:523px)
+{
+    .footer{
+        display:none;
+    }
+}

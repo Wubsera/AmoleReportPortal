@@ -1,0 +1,298 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Calibri;
+    height: auto;
+}
+.table1{
+        background-color: #FDDB00;
+        height:85px;
+        position:absolute;
+        float:left;
+        margin-top:0;
+        width:100%;
+}
+
+.table1 img{
+    width:90px;
+    margin-top:5px;
+}
+.table1 .left img{
+    float:left;
+}
+.table1 .left section{
+    float:left;
+    margin-left:5px;
+}
+.table1 .left section h1{
+    font-size:24pt;
+    color:darkblue;
+}
+.table1 .left section h2,h3{
+    font-size:14pt;
+}
+.table1 .right{
+    right:0;
+    position:absolute;
+    text-align:right;
+    width:100%;
+
+}
+
+.table1 .right img{
+    float:right;
+        right:0;
+}
+
+.table1 .right section{
+    font-size:12pt;
+    font-weight:bold;
+    text-align:right;
+}
+
+.table2{
+        background-color: #005CB7;
+        position:absolute;
+        width:100%;
+        color:white;
+        height:30px;
+        margin-top:85px;
+ 
+}
+.table2 .left{
+    float: left; 
+
+
+}
+
+.table2 .left span{
+    font-size:18pt;
+    font-weight:bold;
+    padding-left:25px;
+}
+
+.table2 .right{
+    float: right;
+    padding-top:5px;
+}
+
+.table2 .right span a{
+    color:white;
+    font-size:12pt;
+    font-weight:bold;
+}
+.goback{
+    margin:120px 0 0 25px;
+    position:absolute;
+}
+.goback a{
+    color:blue;
+    font-weight:bold;
+}
+.menu
+{
+    position:absolute;
+    margin-top:145px;
+    margin-left:25px;
+
+}
+        .form .menu .search {
+            font-weight: bold;
+            font-size: 12pt;
+            margin: 0 5px 0 5px;
+            padding: 2px 2px 2px 2px;
+            background-color: #fefbf7;
+        }
+
+        .form .menu .button1 {
+            font-weight: bold;
+            font-size: 12pt;
+            color: white;
+            width: 160px;
+            margin: 0 5px 0 145px;
+            padding: 2px 2px 2px 2px;
+            background-color: #4169E1;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+
+.panel2 {
+    padding-left: 18%;
+    padding-top: 2%;
+    width:80%;
+}
+
+.left-menu {
+    float: left;
+    width: 28%;
+}
+
+    .left-menu section {
+        font-family: Calibri;
+        font-size: 12pt;
+        padding-left: 5px;
+    }
+
+.right-menu {
+    float: left;
+    width: 30%;
+    position: relative;
+}
+
+    .right-menu section {
+        font-family: Calibri;
+        font-size: 12pt;
+        padding-left: 5px;
+    }
+
+.right-top {
+    float: left;
+    width: 100%;
+    border: solid 1px;
+}
+
+.right-bottom {
+    float:left;
+    border: solid 1px;
+    margin-top:1%;
+     width: 100%;
+}
+
+.release-cash {
+    float:left;
+    width:60%;
+    margin-top:2%;
+    margin-left:15%;
+ 
+}
+
+.release-cash .release-button {
+    background-color: #4169E1;
+    color:white;
+    font-weight:bold;
+    font-family:Calibri;
+    font-size:16pt;
+    cursor:pointer;
+    width:150px;
+    border-radius:4px;
+    float:left;
+}
+.Receipt{
+    margin-left:18%;
+    margin-top:2%;
+    width:60%;
+}
+.Receipt .left-receipt{
+    float: left;
+    width:40%;
+
+}
+.Receipt .right-receipt{
+    float: left;
+}
+.sender-info{
+    margin-left:18%;
+    width:60%;
+    float:left;
+    margin-top:10px;
+}
+.sender-info .sender{
+    float: left;
+    width:40%;
+    margin-top:-10px;
+
+}
+.sender-info .sender h4{
+    margin-bottom:0;
+
+}
+.sender-info .beneficiary{
+    float: left;
+    margin-top:-10px;
+}
+.sender-info .beneficiary h4{
+    margin-bottom:0;
+
+}
+.print{
+    margin-left:18%;
+    margin-top:2%;
+   float:left;
+   width:60%;
+}
+.print .print-button{
+    width:150px;
+    background-color:#4169E1;
+    color:white;
+    font-family:Calibri;
+    font-weight:bold;
+    font-size:16pt;
+    cursor:pointer;
+    margin-right:15px;
+}
+.print .print-cancel{
+    width:150px;
+    background-color:red;
+    color:white;
+    font-family:Calibri;
+    font-weight:bold;
+    font-size:16pt;
+    cursor:pointer;
+    margin-left:15%;
+}
+.print .done{
+    width:100px;
+    background-color:#4169E1;
+    color:white;
+    font-family:Calibri;
+    font-weight:bold;
+    font-size:16pt;
+    cursor:pointer;
+}
+.label2{
+    float:left;
+    color:red;
+    font-weight:bold;
+    margin-left:18%;
+    margin-top:1%;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    color: blue;
+    font-style: italic;
+    font-size: 10pt;
+    width: 50%;
+}
+@media screen and (max-width:840px){
+    body{
+    width:840px;
+}
+    .table1{
+        width:840px;
+    }
+    .table1 .left section h1{
+        font-size:18pt;
+        padding-bottom:13px;
+        padding-top:3px;
+    }
+    .table1 .left section h2,h3{
+        font-size:13pt;
+    }
+    .table1 .left section h2{
+        padding-bottom:4px;
+    }
+
+    .table2{
+       width:840px;
+    }
+    .menu{
+        width:800px;
+    }
+}
+@media screen and (max-height:780px){
+.footer{
+    display:none;
+    
+}
+}

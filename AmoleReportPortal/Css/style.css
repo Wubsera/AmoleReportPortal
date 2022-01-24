@@ -1,0 +1,483 @@
+body {
+    background: url(../image/BG.jpg);
+}
+
+.container {
+    width: 94%;
+    background-color: #fddb00;
+    font-family: Calibri;
+    margin: 2% 2% 1% 2%;
+    display: flex;
+}
+
+.box1 {
+    display: block;
+    width: 45%;
+    float: left;
+    padding-left: 1em;
+    background-color: white;
+}
+
+    .box1 .login_input {
+        width: 98%;
+        padding: 1em 1em 1em 2em;
+    }
+
+        .box1 .login_input h1 {
+            text-align: left;
+            font-size: 36px;
+            font-weight: bolder;
+            padding-right: 2em;
+        }
+
+        .box1 .login_input p {
+            font-size: 18px;
+            padding-right: 2em;
+        }
+
+        .box1 .login_input section {
+            padding: 15px;
+            margin-bottom: 10px;
+            overflow: auto;
+        }
+
+            .box1 .login_input section span {
+                display: inline-block;
+                width: 80%;
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+
+                .box1 .login_input section span label {
+                    display: block;
+                    padding-bottom: 5px;
+                    font-size: 18pt;
+                    font-weight: bold;
+                }
+                .box1 .login_input .label1{
+                     margin-left:5%;
+                     color:red;
+                     font-family:Calibri;
+                     font-size:13pt;
+                }
+                .box1 .login_input section span input {
+                    padding: 10px;
+                    width: 100%;
+                    background-color: transparent;
+                    border-color: transparent;
+                    border-bottom: solid thin lightgrey;
+                    font-weight: bold;
+                    font-size: 16pt;
+                }
+
+                    .box1 .login_input section span input:focus {
+                        border-bottom: solid #0a4d9e;
+                        outline: none;
+                    }
+
+        .box1 .login_input .links input[type=submit] {
+            display: none;
+        }
+
+        .box1 .login_input .links {
+            margin: 2em 2em 2em 0;
+            font-weight: bolder;
+            font-size: 16pt;
+            width: 90%;
+        }
+
+            .box1 .login_input .links .Button {
+                margin: 2em 2em 0 0em;
+                padding: 0.5em 3em 0.5em 2em;
+                color: black;
+                background-color: #fddb00;
+                border-radius: 40px;
+                font-weight: bolder;
+                cursor: pointer;
+                font-size: 24px;
+            }
+
+                .box1 .login_input .links .Button:hover {
+                    transition: 0.2s;
+                    background-color: #0a4d9e;
+                    color: white;
+                }
+
+    .box1 .join_us {
+        width: 100%;
+        padding-top: 3em;
+    }
+
+        .box1 .join_us h2 {
+            padding-left: 25%;
+            font-size: 24px;
+            font-weight: bolder;
+            padding-bottom: 1em;
+        }
+
+        .box1 .join_us span {
+            padding: 1em 0em 1em 1em;
+            display: inline-block;
+        }
+
+            .box1 .join_us span img {
+                width: 60px;
+                display: block;
+            }
+
+            .box1 .join_us span a {
+                text-decoration: none;
+                color: black;
+            }
+
+.container .box1 .login_input .gridview2 {
+    margin-left: 3%;
+    color: red;
+    font-family: Calibri;
+    font-size: 14pt;
+    margin-right: 2em;
+}
+
+.box1 .join_us span a:hover {
+    text-decoration: underline;
+    color: #005cb7;
+}
+
+.box1 .join_us span a img:hover {
+    filter: contrast(0);
+}
+
+.box2 {
+    width: 52%;
+    float: left;
+    background-color: #fddb00;
+}
+
+    .box2 .amole {
+        width: 100%;
+        float: left;
+        border-bottom: solid 0.4px #c3a000;
+    }
+
+        .box2 .amole .logo {
+            float: left;
+            width: 64%;
+            padding-right: 2em;
+        }
+
+            .box2 .amole .logo img {
+                width: 100%;
+                padding: 1.5em 1em 1em 1em;
+            }
+
+    /* .box2 .amole .line{
+    float: left;
+    border-left: 2px solid #c3a000 ; 
+    height: 300px; 
+    margin-top:0.5em;
+} */
+    .box2 .contact_us {
+        float: left;
+        width: 30%;
+        padding: 0.5em 0 0em 0.5em;
+        border-left: solid 0.4px #c3a000;
+        display: block;
+    }
+
+        .box2 .contact_us h2 {
+            text-align: left;
+            color: #005cb7;
+            font-size: 24px;
+            font-weight: bolder;
+            width: 100%;
+            padding-left: 25%;
+        }
+
+        .box2 .contact_us .call {
+            float: left;
+            display: block;
+            width: 100%;
+            padding: 0 1em 0 1em;
+        }
+
+            .box2 .contact_us .call img {
+                float: left;
+                padding: 0.5em 0.6em 0 0;
+                margin-left: 25%;
+            }
+
+            .box2 .contact_us .call h1 {
+                margin-top: 0;
+                padding-top: 0.5em;
+                margin-bottom: 1em;
+                margin-left: 25%;
+            }
+
+            .box2 .contact_us .call p {
+                width: 90%;
+                text-align: left;
+                margin-left: 10%;
+                margin-right: 5%;
+            }
+
+        .box2 .contact_us .sms {
+            float: left;
+            display: block;
+            width: 100%;
+            padding: 0 1em 0 1em;
+        }
+
+            .box2 .contact_us .sms img {
+                float: left;
+                padding: 0.5em 0.6em 0 0;
+                margin-left: 25%;
+            }
+
+            .box2 .contact_us .sms h1 {
+                margin-top: 0;
+                padding-top: 0.4em;
+                margin-bottom: 1em;
+                margin-left: 25%;
+            }
+
+            .box2 .contact_us .sms p {
+                width: 90%;
+                text-align: left;
+                margin-left: 10%;
+                margin-right: 5%;
+            }
+
+.container .box2 .amole .contact_us .help_desk {
+    text-align: left;
+    color: #005cb7;
+    font-size: 18pt;
+    font-weight: bolder;
+    width: 100%;
+    display: inline-block;
+    padding-left: 10%;
+    padding-bottom: 1em;
+    font-size:14pt;
+}
+
+.container .box2 .amole .help_desk:hover {
+    text-decoration: underline;
+    color: #005cb7;
+}
+
+
+.box2 .ad {
+    padding-bottom: 1em;
+    width: 99%;
+    display: block;
+    padding-top: 2em;
+}
+
+    .box2 .ad img {
+        float: left;
+        display: inline-block;
+        width: 23.5%;
+        border: solid thin white;
+        margin: 0 0.5em 0 0.5em;
+    }
+
+.ad h3 {
+    color: #005cb7;
+    text-align: left;
+    display: block;
+    padding-right: 1em;
+    width:96%;
+}
+
+.box2 .ad p {
+    text-align: left;
+    font-size: 16px;
+    font-family: Calibri;
+    padding: 0 2em 0 0.2em;
+    width:94%;
+
+}
+
+@media screen and (max-width: 1879px) {
+    .container {
+        width: 94%;
+        background-color: #fddb00;
+        font-family: Calibri;
+        margin: 2% 2% 1% 2%;
+    }
+
+   /*.box2 .ad img{
+        width:43%;
+    }*/
+
+}
+
+@media screen and (max-width: 1552px) {
+    .container {
+        width: 90%;
+        overflow: hidden;
+        margin-left: 4%;
+        margin-right: 4%;
+        margin-top: 2%;
+        display: flex;
+    }
+
+    .box2 .amole .logo img {
+        width: 150%;
+        border-bottom: solid 0.4px #c3a000;
+    }
+
+    .box2 .amole .contact_us {
+        width: 100%;
+        border-left: none;
+    }
+
+        .box2 .amole .contact_us h2 {
+            padding-left: 40%;
+        }
+
+
+        .box2 .amole .contact_us .call {
+            width: 45%;
+            margin: 0;
+            float: right;
+            padding: 0 0.2em 0.2em 0.2em;
+        }
+
+        .box2 .amole .contact_us .sms {
+            float: right;
+            margin: 0;
+            width: 45%;
+            display: block;
+        }
+
+    .container .box2 .amole .contact_us .help_desk {
+        padding-left: 35%;
+    }
+}
+@media screen and (max-width:1038px){
+    .container .box1{
+        min-width:410px;
+    } 
+}
+@media screen and (max-width: 1017px) {
+    .container {
+        display: block;
+        width: 75%;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 5%;
+    }
+
+        .container .box1 {
+            width: 100%;
+            float: left;
+        }
+
+    .box1 .login_input p {
+        margin: 0 1em 0 0;
+    }
+
+    .container .box2 {
+        width: 100%;
+        display: block;
+    }
+
+    .box2 .amole .contact_us {
+        width: 100%;
+        border-left: none;
+    }
+
+        .box2 .amole .contact_us h2 {
+            padding-left: 40%;
+        }
+
+        .box2 .amole .contact_us .call {
+            width: 45%;
+            margin: 0;
+            float: right;
+            padding: 0 0.5em 0.2em 0.2em;
+        }
+
+        .box2 .amole .contact_us .sms {
+            float: right;
+            margin: 0;
+            width: 45%;
+            display: block;
+        }
+
+    .container .box2 .ad p {
+        margin-left: 1em;
+    }
+}
+
+@media screen and (max-width:650px) {
+    .container {
+        display: block;
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 5%;
+    }
+
+    .container {
+        min-width: 360px;
+    }
+
+    .box2 .amole .contact_us h2 {
+        width: 100%;
+        padding-left: 25%;
+    }
+
+    .box2 .amole .contact_us .call {
+        padding-right: 1em;
+        width: 100%;
+    }
+
+    .box2 .amole .contact_us .sms {
+        padding-right: 1em;
+        width: 100%;
+    }
+
+    .box2 .amole .contact_us .help_desk {
+        width: 100%;
+        margin-left: -25%;
+    }
+
+    .box2 .ad {
+        padding-right: 1em;
+    }
+    /* .container .box1 .login_input .links .Button{
+        width: 50%;
+        display:block;
+        margin: 0;
+        text-align: center;
+    } */
+
+}
+@media screen and (max-width:575px) {
+   body{
+       width:100%;
+   }
+     .container {
+        display: block;
+        width:100%;
+        margin-top:3%;
+        margin-left:-2%;
+    }
+
+
+    .box1 .login_input .links  {
+        
+       
+        /*margin-left:0;
+        padding-left:1px*/
+    }
+   
+    .box1 .join_us  h2 {
+               
+                
+                text-align:left;
+                
+                
+            }
+}
