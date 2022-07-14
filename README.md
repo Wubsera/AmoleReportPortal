@@ -1,1 +1,1 @@
-this source code is owned by Moneta Techmologies (Fettan Gropup of Companies). 
+The owner of this source code is Moneta Techmnologies SC (Fettan Limited).
