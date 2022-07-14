@@ -24,6 +24,8 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -46,6 +48,46 @@
     <Reference Include="CrystalDecisions.CrystalReports.Engine">
       <HintPath>c:\program files (x86)\sap businessobjects\crystal reports for .net framework 4.0\common\sap businessobjects enterprise xi 4.0\win32_x86\dotnet\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
     </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ClientDoc, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\packages\CrystalReports.ReportAppServer.ClientDoc.13.0.4001\lib\net40\CrystalDecisions.ReportAppServer.ClientDoc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\packages\CrystalReports.ReportAppServer.CommLayer.13.0.4001\lib\net40\CrystalDecisions.ReportAppServer.CommLayer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommonControls, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\packages\CrystalReports.ReportAppServer.CommonControls.13.0.4001\lib\net40\CrystalDecisions.ReportAppServer.CommonControls.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommonObjectModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\packages\CrystalReports.ReportAppServer.CommonObjectModel.13.0.4001\lib\net40\CrystalDecisions.ReportAppServer.CommonObjectModel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.Controllers, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\packages\CrystalReports.ReportAppServer.Controllers.13.0.4001\lib\net40\CrystalDecisions.ReportAppServer.Controllers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CubeDefModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\packages\CrystalReports.ReportAppServer.CubeDefModel.13.0.4001\lib\net40\CrystalDecisions.ReportAppServer.CubeDefModel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.DataDefModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\packages\CrystalReports.ReportAppServer.DataDefModel.13.0.4001\lib\net40\CrystalDecisions.ReportAppServer.DataDefModel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ReportDefModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\packages\CrystalReports.ReportAppServer.ReportDefModel.13.0.4001\lib\net40\CrystalDecisions.ReportAppServer.ReportDefModel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="CrystalDecisions.ReportSource">
       <HintPath>c:\program files (x86)\sap businessobjects\crystal reports for .net framework 4.0\common\sap businessobjects enterprise xi 4.0\win32_x86\dotnet\CrystalDecisions.ReportSource.dll</HintPath>
     </Reference>
@@ -55,8 +97,12 @@
     <Reference Include="CrystalDecisions.Web">
       <HintPath>c:\program files (x86)\sap businessobjects\crystal reports for .net framework 4.0\common\sap businessobjects enterprise xi 4.0\win32_x86\dotnet\CrystalDecisions.Web.dll</HintPath>
     </Reference>
-    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=AMD64">
-      <HintPath>..\packages\Cfee.CrystalReports.Log4Net.13.0.3501.1\lib\net20\log4net.dll</HintPath>
+    <Reference Include="log4net, Version=2.0.14.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.14\lib\net45\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Azure.AppService.ApiApps.Service, Version=0.9.16.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Azure.AppService.ApiApps.Service.0.9.16\lib\net45\Microsoft.Azure.AppService.ApiApps.Service.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -71,6 +117,10 @@
     <Reference Include="Microsoft.ReportViewer.WebForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
@@ -89,23 +139,30 @@
       <HintPath>..\packages\StatePrinter.3.0.1\lib\net35\StatePrinter.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IdentityModel.Tokens.Jwt.4.0.0\lib\net45\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
     <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
       <HintPath>..\packages\WebActivatorEx.2.0.2\lib\net40\WebActivatorEx.dll</HintPath>
       <Private>True</Private>
@@ -113,9 +170,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Css\UploadBulkPaymentFile.css" />
+    <Content Include="BulkPaymentsBatchFileCheckStatus.aspx" />
+    <Content Include="BulkPaymentBatchFileSummaryReport.aspx" />
+    <Content Include="BulkPaymentBatchFileDetailReport.aspx" />
+    <Content Include="image\approv.jpg" />
+    <Content Include="image\deny.jpg" />
+    <Content Include="image\review.png" />
+    <Content Include="image\review2.jpg" />
+    <Content Include="PortalGetListBulkPaymentBatchFileDetailReport.aspx" />
+    <Content Include="PortalGetListBulkPaymentBatchFileSummaryReport.aspx" />
     <Content Include="UploadBulkPaymentFile.aspx" />
     <Content Include="AboutUs.aspx" />
-    <Content Include="AirtimeTopup.aspx" />
     <Content Include="AmoleServiceIntergrationLogReport.aspx" />
     <Content Include="Css\CustomerLookup.css" />
     <Content Include="Css\ChangePassword.css" />
@@ -170,7 +235,6 @@
     <Content Include="Css\helpdesk.css" />
     <Content Include="Css\style.css" />
     <Content Include="CustomerLookup.aspx" />
-    <Content Include="dstv.aspx" />
     <Content Include="DSTVTransactionLogReport.aspx" />
     <Content Include="EthAirlinesReservation.aspx" />
     <Content Include="ChangePassword.aspx" />
@@ -231,6 +295,9 @@
     <Content Include="PortalGetListContentSalesDetailReport.aspx" />
     <Content Include="PortalGetListRemittanceReport.aspx" />
     <Content Include="WebForm1.aspx" />
+    <Content Include="Metadata\deploymentTemplates\apiappconfig.azureresource.json" />
+    <Content Include="apiapp.json" />
+    <None Include="Properties\PublishProfiles\AmolePortal.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -256,6 +323,53 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BulkPaymentsBatchFileCheckStatus.aspx.cs">
+      <DependentUpon>BulkPaymentsBatchFileCheckStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BulkPaymentsBatchFileCheckStatus.aspx.designer.cs">
+      <DependentUpon>BulkPaymentsBatchFileCheckStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BulkPaymentBatchFileSummaryReport.aspx.cs">
+      <DependentUpon>BulkPaymentBatchFileSummaryReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BulkPaymentBatchFileSummaryReport.aspx.designer.cs">
+      <DependentUpon>BulkPaymentBatchFileSummaryReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BulkPaymentBatchFileSummaryReport1.cs">
+      <DependentUpon>BulkPaymentBatchFileSummaryReport1.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BulkPaymentBatchFileDetailReport.aspx.cs">
+      <DependentUpon>BulkPaymentBatchFileDetailReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BulkPaymentBatchFileDetailReport.aspx.designer.cs">
+      <DependentUpon>BulkPaymentBatchFileDetailReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BulkPaymentBatchFileDetailReport1.cs">
+      <DependentUpon>BulkPaymentBatchFileDetailReport1.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="PortalGetListBulkPaymentBatchFileDetailReport.aspx.cs">
+      <DependentUpon>PortalGetListBulkPaymentBatchFileDetailReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PortalGetListBulkPaymentBatchFileDetailReport.aspx.designer.cs">
+      <DependentUpon>PortalGetListBulkPaymentBatchFileDetailReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PortalGetListBulkPaymentBatchFileSummaryReport.aspx.cs">
+      <DependentUpon>PortalGetListBulkPaymentBatchFileSummaryReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PortalGetListBulkPaymentBatchFileSummaryReport.aspx.designer.cs">
+      <DependentUpon>PortalGetListBulkPaymentBatchFileSummaryReport.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UploadBulkPaymentFile.aspx.cs">
       <DependentUpon>UploadBulkPaymentFile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -269,13 +383,6 @@
     </Compile>
     <Compile Include="AboutUs.aspx.designer.cs">
       <DependentUpon>AboutUs.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="AirtimeTopup.aspx.cs">
-      <DependentUpon>AirtimeTopup.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AirtimeTopup.aspx.designer.cs">
-      <DependentUpon>AirtimeTopup.aspx</DependentUpon>
     </Compile>
     <Compile Include="AmoleServiceIntergrationLogReport.aspx.cs">
       <DependentUpon>AmoleServiceIntergrationLogReport.aspx</DependentUpon>
@@ -570,12 +677,6 @@
       <DesignTime>True</DesignTime>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="AirtimeTopup.cs">
-      <DependentUpon>AirtimeTopup.rpt</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="CustomerLookup.aspx.cs">
       <DependentUpon>CustomerLookup.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -601,13 +702,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="dstv.aspx.cs">
-      <DependentUpon>dstv.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="dstv.aspx.designer.cs">
-      <DependentUpon>dstv.aspx</DependentUpon>
     </Compile>
     <Compile Include="EthAirlinesReservation.aspx.cs">
       <DependentUpon>EthAirlinesReservation.aspx</DependentUpon>
@@ -652,12 +746,6 @@
     </Compile>
     <Compile Include="GridViewSummary.cs" />
     <Compile Include="GridViewSummaryList.cs" />
-    <Compile Include="Dstv.cs">
-      <DependentUpon>Dstv.rpt</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="helpDeskc.aspx.cs">
       <DependentUpon>helpDeskc.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -904,13 +992,13 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ContentSales.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="AirtimeTopup.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>AirtimeTopup.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="CanalPlusTransactionLogReport1.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CanalPlusTransactionLogReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BulkPaymentBatchFileDetailReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BulkPaymentBatchFileDetailReport1.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerLookupReport1.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -927,10 +1015,6 @@
     <EmbeddedResource Include="EthAirlinesPayment.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>EthAirlinesPayment.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Dstv.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>Dstv.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="AmolePaymentGatewayLogReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -959,6 +1043,10 @@
     <EmbeddedResource Include="ICSAccountBalance1.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ICSAccountBalance1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BulkPaymentBatchFileSummaryReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BulkPaymentBatchFileSummaryReport1.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="RemittanceSettlementReport1.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

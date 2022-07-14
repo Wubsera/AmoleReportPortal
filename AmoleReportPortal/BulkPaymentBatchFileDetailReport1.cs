@@ -16,14 +16,14 @@ namespace AmoleReportPortal {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class Dstv : ReportClass {
+    public class BulkPaymentBatchFileDetailReport1 : ReportClass {
         
-        public Dstv() {
+        public BulkPaymentBatchFileDetailReport1() {
         }
         
         public override string ResourceName {
             get {
-                return "Dstv.rpt";
+                return "BulkPaymentBatchFileDetailReport1.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace AmoleReportPortal {
         
         public override string FullResourceName {
             get {
-                return "AmoleReportPortal.Dstv.rpt";
+                return "AmoleReportPortal.BulkPaymentBatchFileDetailReport1.rpt";
             }
             set {
                 // Do nothing
@@ -66,7 +66,7 @@ namespace AmoleReportPortal {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section GroupHeaderSection1 {
+        public CrystalDecisions.CrystalReports.Engine.Section Section3 {
             get {
                 return this.ReportDefinition.Sections[2];
             }
@@ -74,7 +74,7 @@ namespace AmoleReportPortal {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section GroupHeaderSection2 {
+        public CrystalDecisions.CrystalReports.Engine.Section Section4 {
             get {
                 return this.ReportDefinition.Sections[3];
             }
@@ -82,41 +82,9 @@ namespace AmoleReportPortal {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section Section3 {
-            get {
-                return this.ReportDefinition.Sections[4];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section GroupFooterSection2 {
-            get {
-                return this.ReportDefinition.Sections[5];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section GroupFooterSection1 {
-            get {
-                return this.ReportDefinition.Sections[6];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section Section4 {
-            get {
-                return this.ReportDefinition.Sections[7];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
         public CrystalDecisions.CrystalReports.Engine.Section Section5 {
             get {
-                return this.ReportDefinition.Sections[8];
+                return this.ReportDefinition.Sections[4];
             }
         }
         
@@ -295,12 +263,28 @@ namespace AmoleReportPortal {
                 return this.DataDefinition.ParameterFields[21];
             }
         }
+        
+        [Browsable(false)]
+        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public CrystalDecisions.Shared.IParameterField Parameter_String4 {
+            get {
+                return this.DataDefinition.ParameterFields[22];
+            }
+        }
+        
+        [Browsable(false)]
+        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public CrystalDecisions.Shared.IParameterField Parameter_String5 {
+            get {
+                return this.DataDefinition.ParameterFields[23];
+            }
+        }
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedDstv : Component, ICachedReport {
+    public class CachedBulkPaymentBatchFileDetailReport1 : Component, ICachedReport {
         
-        public CachedDstv() {
+        public CachedBulkPaymentBatchFileDetailReport1() {
         }
         
         [Browsable(false)]
@@ -337,7 +321,7 @@ namespace AmoleReportPortal {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            Dstv rpt = new Dstv();
+            BulkPaymentBatchFileDetailReport1 rpt = new BulkPaymentBatchFileDetailReport1();
             rpt.Site = this.Site;
             return rpt;
         }

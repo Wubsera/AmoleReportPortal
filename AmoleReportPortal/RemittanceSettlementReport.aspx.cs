@@ -5,6 +5,7 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -199,10 +200,42 @@ namespace AmoleReportPortal
                     //crystalReport.Dispose();
                     //crystalReport.Close();
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
-                    ClientScript.RegisterClientScriptBlock(this.GetType(), "s", "window.alert('Check your connection ');", true);
-                    Response.Redirect("Login.aspx");
+                    ClientScript.RegisterClientScriptBlock(this.GetType(), "Login.aspx", "window.alert('Please Contact Amole Support ');",  true);
+                    // ClientScript.RegisterClientScriptBlock(this.GetType(), "alert", ex.ToString(), true);
+                    // Response.Redirect("Login.aspx");
+                    // Label1.Text = ("Please contact amole support")+ex;
+
+
+                    //string url = "Login.aspx";
+                    //StringBuilder sb = new StringBuilder();
+                    //sb.Append("<script type = 'text/javascript'>");
+                    //sb.Append("window.open('");
+                    //sb.Append(url);
+                    //sb.Append("');");
+                    //sb.Append("</script>");
+                    //ClientScript.RegisterStartupScript(this.GetType(), "script", sb.ToString());
+
+                    //string page = "Login.aspx";
+                    //string myStringVariable = "Password Update!";
+                    //ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + myStringVariable + "');Response.Redirect('" + page + "' );", true);
+
+
+
+
+                    // ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "<script> alert('User details saved sucessfully');window.open('Login.aspx');</script>", true);
+
+                    //string message = "You will now be redirected to ASPSnippets Home Page.";
+                    //string url = "//www.aspsnippets.com/";
+                    //string script = "window.onload = function(){ alert('";
+                    //script += message;
+                    //script += "');";
+                    //script += "window.location = '";
+                    //script += url;
+                    //script += "'; }";
+                    //ClientScript.RegisterStartupScript(this.GetType(), "Redirect", script, true);
+
                 }
             }
             else

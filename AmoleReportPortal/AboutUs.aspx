@@ -1,8 +1,8 @@
 ﻿<%@ Page Language="C#" EnableViewState="true" AutoEventWireup="true" CodeBehind="AboutUs.aspx.cs" Inherits="AmoleReportPortal.AboutUs" %>
 
-<%@ Register Assembly="Microsoft.ReportViewer.WebForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" Namespace="Microsoft.Reporting.WebForms" TagPrefix="rsweb" %>
+<%--<%@ Register Assembly="Microsoft.ReportViewer.WebForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" Namespace="Microsoft.Reporting.WebForms" TagPrefix="rsweb" %>
 
-<%@ Register Assembly="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" Namespace="CrystalDecisions.Web" TagPrefix="CR" %>
+<%@ Register Assembly="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" Namespace="CrystalDecisions.Web" TagPrefix="CR" %>--%>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -61,8 +61,8 @@
                         <img src="image/AmoleImage3.png" />
                     <section style="font-size:13pt;margin-top:-15px;margin-left:60px">
                         <p style="margin-bottom:-15px">Amole Portal</p>
-                        <p style="margin-bottom:-15px">Version: 2.0</p>
-                        <p>Released: 06 Jun, 2021</p>
+                        <p style="margin-bottom:-15px">Version: 2.0.0.26</p>
+                        <p>Released: 13 Apr, 2022</p>
                         </section>
 
                 </div>
@@ -138,7 +138,7 @@
 
         function resetTimer() {
             clearTimeout(t);
-            t = setTimeout(logout, 1800000);  // time is in milliseconds
+            t = setTimeout(logout, 1200000);  // time is in milliseconds
         }
     }
     idleLogout();

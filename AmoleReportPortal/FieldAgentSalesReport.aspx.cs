@@ -81,165 +81,173 @@ namespace AmoleReportPortal
         }
         protected void Page_Init(object sender, EventArgs e)
         {
-            if (Session["LoginID"] != null)
-            {
-                LoginID = Session["LoginID"].ToString();
-            }
-            if (Session["ReportHeading1"] != null)
-            {
-                ReportHeading1 = Session["ReportHeading1"].ToString();
-            }
-            if (Session["ReportHeading2"] != null)
-            {
-                ReportHeading2 = Session["ReportHeading2"].ToString();
-            }
-            if (Session["ReportHeading3"] != null)
-            {
-                ReportHeading3 = Session["ReportHeading3"].ToString();
-            }
-            if (Session["FullName"] != null)
-            {
-                FullName = Session["FullName"].ToString();
-            }
-            if (Session["LastLoggedIn"] != null)
-            {
-                LastLoggedIn = Session["LastLoggedIn"].ToString();
-            }
-            if (Session["MerchantID"] != null)
-            {
-                MerchantID = Session["MerchantID"].ToString();
-            }
-            if (Session["From"] != null)
-            {
-                From = Session["From"].ToString();
-            }
-            if (Session["To"] != null)
-            {
-                To = Session["To"].ToString();
-            }
-            if (Session["time"] != null)
-            {
-                time = Session["time"].ToString();
-            }
-            if (Session["date"] != null)
-            {
-                date = Session["date"].ToString();
-            }
-            if (Session["reportLink"] != null)
-            {
-                reportLink = Session["reportLink"].ToString();
-            }
-            if (Session["rptnumber"] != null)
-            {
-                rptnumber2 = Session["rptnumber"].ToString();
-            }
-            if (Session["Region"] != null)
-            {
-                RegionDropdown = Session["Region"].ToString();
-            }
-            if (Session["Zone"] != null)
-            {
-                ZoneDropdown = Session["Zone"].ToString();
-            }
-            if (Session["City"] != null)
-            {
-                CityDropdown = Session["City"].ToString();
-            }
-            if (Session["Woreda"] != null)
-            {
-                WoredaDropdown = Session["Woreda"].ToString();
-            }
-            SqlConnection phcon = new SqlConnection(ConfigurationManager.ConnectionStrings["FettanReportPortalConnection"].ToString());
-            phcon.Open();
-            SqlCommand phcmd = new SqlCommand("sp_Portal_Report_Heading", phcon);
-            phcmd.CommandType = CommandType.StoredProcedure;
-            phcmd.Parameters.AddWithValue("@LoginID", LoginID);
-            using (SqlDataReader sqlReader = phcmd.ExecuteReader())
+            try
             {
 
+                if (Session["LoginID"] != null)
+                {
+                    LoginID = Session["LoginID"].ToString();
+                }
+                if (Session["ReportHeading1"] != null)
+                {
+                    ReportHeading1 = Session["ReportHeading1"].ToString();
+                }
+                if (Session["ReportHeading2"] != null)
+                {
+                    ReportHeading2 = Session["ReportHeading2"].ToString();
+                }
+                if (Session["ReportHeading3"] != null)
+                {
+                    ReportHeading3 = Session["ReportHeading3"].ToString();
+                }
+                if (Session["FullName"] != null)
+                {
+                    FullName = Session["FullName"].ToString();
+                }
+                if (Session["LastLoggedIn"] != null)
+                {
+                    LastLoggedIn = Session["LastLoggedIn"].ToString();
+                }
+                if (Session["MerchantID"] != null)
+                {
+                    MerchantID = Session["MerchantID"].ToString();
+                }
+                if (Session["From"] != null)
+                {
+                    From = Session["From"].ToString();
+                }
+                if (Session["To"] != null)
+                {
+                    To = Session["To"].ToString();
+                }
+                if (Session["time"] != null)
+                {
+                    time = Session["time"].ToString();
+                }
+                if (Session["date"] != null)
+                {
+                    date = Session["date"].ToString();
+                }
+                if (Session["reportLink"] != null)
+                {
+                    reportLink = Session["reportLink"].ToString();
+                }
+                if (Session["rptnumber"] != null)
+                {
+                    rptnumber2 = Session["rptnumber"].ToString();
+                }
+                if (Session["Region"] != null)
+                {
+                    RegionDropdown = Session["Region"].ToString();
+                }
+                if (Session["Zone"] != null)
+                {
+                    ZoneDropdown = Session["Zone"].ToString();
+                }
+                if (Session["City"] != null)
+                {
+                    CityDropdown = Session["City"].ToString();
+                }
+                if (Session["Woreda"] != null)
+                {
+                    WoredaDropdown = Session["Woreda"].ToString();
+                }
+                SqlConnection phcon = new SqlConnection(ConfigurationManager.ConnectionStrings["FettanReportPortalConnection"].ToString());
+                phcon.Open();
+                SqlCommand phcmd = new SqlCommand("sp_Portal_Report_Heading", phcon);
+                phcmd.CommandType = CommandType.StoredProcedure;
+                phcmd.Parameters.AddWithValue("@LoginID", LoginID);
+                using (SqlDataReader sqlReader = phcmd.ExecuteReader())
+                {
 
-                while (sqlReader.Read())
+
+                    while (sqlReader.Read())
+                    {
+                        try
+                        {
+                            byte[] PH = (byte[])sqlReader["Photo"];
+
+                            photo = Convert.ToBase64String(PH);
+                            Image1.ImageUrl = "data:image;base64," + photo;
+                        }
+                        catch (Exception)
+                        {
+                            Image1.ImageUrl = "~/images/AmoleLogo.jpg";
+                        }
+                        Image1.Width = 85;
+                        Image1.Height = 75;
+
+
+                    }
+                    sqlReader.Close();
+                }
+                phcon.Close();
+
+                if ((HttpContext.Current.Request.UrlReferrer == null))
+                {
+                    Response.Redirect("Login.aspx");
+                }
+
+                if (!IsPostBack)
                 {
                     try
                     {
-                        byte[] PH = (byte[])sqlReader["Photo"];
+                        crystalReport.Load(Server.MapPath("FieldAgentSalesReport1.rpt"));
+                        SqlConnection conn = new SqlConnection(ConfigurationManager
+                          .ConnectionStrings["FettanReportPortalConnection"].ConnectionString);
 
-                        photo = Convert.ToBase64String(PH);
-                        Image1.ImageUrl = "data:image;base64," + photo;
+                        SqlCommand cmd = new SqlCommand("sp_Portal_Report", conn);
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@LoginID", LoginID);
+                        cmd.Parameters.AddWithValue("@ReportNumber", rptnumber2);
+                        cmd.Parameters.AddWithValue("@Integer1", MerchantID);
+                        cmd.Parameters.AddWithValue("@String1", RegionDropdown);
+                        cmd.Parameters.AddWithValue("@String2", ZoneDropdown);
+                        cmd.Parameters.AddWithValue("@String3", CityDropdown);
+                        cmd.Parameters.AddWithValue("@String4", WoredaDropdown);
+                        cmd.Parameters.AddWithValue("@Date1", From);
+                        cmd.Parameters.AddWithValue("@Date2", To);
+
+                        SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                        DataTable dt = new DataTable();
+                        sda.Fill(dt);
+                        crystalReport.SetDataSource(dt);
+                        CrystalReportViewer1.ReportSource = crystalReport;
+                        CrystalReportViewer1.DataBind();
+                        crystalReport.SetParameterValue("ReportHeading1", ReportHeading1);
+                        crystalReport.SetParameterValue("ReportHeading2", ReportHeading2);
+                        crystalReport.SetParameterValue("ReportHeading3", ReportHeading3);
+                        crystalReport.SetParameterValue("ReportName", reportLink);
+                        crystalReport.SetParameterValue("From", From);
+                        crystalReport.SetParameterValue("To", To);
+                        crystalReport.SetParameterValue("time", time);
+                        crystalReport.SetParameterValue("date", date);
+                        CrystalReportViewer1.HasCrystalLogo = false;
+                        CrystalReportViewer1.HasToggleParameterPanelButton = false;
+                        Session["ReportDocument"] = crystalReport;
+                        //crystalReport.Dispose();
+                        //crystalReport.Close();
                     }
-                    catch (Exception)
+                    catch (Exception ex)
                     {
-                        Image1.ImageUrl = "~/images/AmoleLogo.jpg";
+                        ClientScript.RegisterClientScriptBlock(this.GetType(), "s", "window.alert('Check your connection ');", true);
+                        Response.Redirect("Login.aspx");
+                        // Response.Write(ex);
                     }
-                    Image1.Width = 85;
-                    Image1.Height = 75;
-
-
                 }
-                sqlReader.Close();
-            }
-            phcon.Close();
 
-            if ((HttpContext.Current.Request.UrlReferrer == null))
+                else
+                {
+                    ReportDocument doc = (ReportDocument)Session["ReportDocument"];
+                    CrystalReportViewer1.ReportSource = doc;
+                }
+
+            }
+            catch(Exception ex)
             {
+                ClientScript.RegisterClientScriptBlock(this.GetType(), "s", "window.alert('Session timeout! ');", true);
                 Response.Redirect("Login.aspx");
             }
-
-            if (!IsPostBack)
-            {
-                try
-                {
-                    crystalReport.Load(Server.MapPath("FieldAgentSalesReport1.rpt"));
-                    SqlConnection conn = new SqlConnection(ConfigurationManager
-                      .ConnectionStrings["FettanReportPortalConnection"].ConnectionString);
-
-                    SqlCommand cmd = new SqlCommand("sp_Portal_Report", conn);
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@LoginID", LoginID);
-                    cmd.Parameters.AddWithValue("@ReportNumber", rptnumber2);
-                    cmd.Parameters.AddWithValue("@Integer1", MerchantID);
-                    cmd.Parameters.AddWithValue("@String1", RegionDropdown);
-                    cmd.Parameters.AddWithValue("@String2", ZoneDropdown);
-                    cmd.Parameters.AddWithValue("@String3", CityDropdown);
-                    cmd.Parameters.AddWithValue("@String4", WoredaDropdown);
-                    cmd.Parameters.AddWithValue("@Date1", From);
-                    cmd.Parameters.AddWithValue("@Date2", To);
-                    
-                    SqlDataAdapter sda = new SqlDataAdapter(cmd);
-                    DataTable dt = new DataTable();
-                    sda.Fill(dt);
-                    crystalReport.SetDataSource(dt);
-                    CrystalReportViewer1.ReportSource = crystalReport;
-                    CrystalReportViewer1.DataBind();
-                    crystalReport.SetParameterValue("ReportHeading1", ReportHeading1);
-                    crystalReport.SetParameterValue("ReportHeading2", ReportHeading2);
-                    crystalReport.SetParameterValue("ReportHeading3", ReportHeading3);
-                    crystalReport.SetParameterValue("ReportName", reportLink);
-                    crystalReport.SetParameterValue("From", From);
-                    crystalReport.SetParameterValue("To", To);
-                    crystalReport.SetParameterValue("time", time);
-                    crystalReport.SetParameterValue("date", date);
-                    CrystalReportViewer1.HasCrystalLogo = false;
-                    CrystalReportViewer1.HasToggleParameterPanelButton = false;
-                    Session["ReportDocument"] = crystalReport;
-                    //crystalReport.Dispose();
-                    //crystalReport.Close();
-                }
-                catch (Exception ex)
-                {
-                    ClientScript.RegisterClientScriptBlock(this.GetType(), "s", "window.alert('Check your connection ');", true);
-                     Response.Redirect("Login.aspx");
-                   // Response.Write(ex);
-                }
-            }
-
-            else
-            {
-                ReportDocument doc = (ReportDocument)Session["ReportDocument"];
-                CrystalReportViewer1.ReportSource = doc;
-            }
-
-
         }
     }
 }

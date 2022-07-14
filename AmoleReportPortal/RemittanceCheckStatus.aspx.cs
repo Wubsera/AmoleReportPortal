@@ -290,7 +290,7 @@ namespace AmoleReportPortal
                                 SenderEmail = GridView2.Rows[i].Cells[25].Text;
                                 RecipientName = GridView2.Rows[i].Cells[15].Text;
                                 RecipientCity = GridView2.Rows[i].Cells[19].Text;
-                                RecipientCountry = GridView2.Rows[i].Cells[10].Text;
+                                RecipientCountry = GridView2.Rows[i].Cells[20].Text;
                                 RecipientBirthDate = GridView2.Rows[i].Cells[18].Text;
                                 RecipientMobile = GridView2.Rows[i].Cells[16].Text;
                                 RecipientNationality = GridView2.Rows[i].Cells[33].Text;
@@ -304,7 +304,7 @@ namespace AmoleReportPortal
                                 Date3 = DateTime.Parse(RecipientBirthDate);
                                 RBDate2 = Date3.ToString("dd MMM yyyy", null);
                                 Date4 = DateTime.Parse(ReceivedDate);
-                                ReceivedDate = Date4.ToString("dd MMM yyyy - h:MM tt", null);
+                                //ReceivedDate = Date4.ToString("dd MMM yyyy - h:MM tt", null);
 
                                 
 

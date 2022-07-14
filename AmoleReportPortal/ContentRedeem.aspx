@@ -1,8 +1,10 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ContentRedeem.aspx.cs" Inherits="AmoleReportPortal.ContentRedeem" %>
 
-<%@ Register Assembly="Microsoft.ReportViewer.WebForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" Namespace="Microsoft.Reporting.WebForms" TagPrefix="rsweb" %>
+<%@ Register Assembly="CrystalDecisions.Web" Namespace="CrystalDecisions.Web" TagPrefix="CR" %>
 
-<%@ Register Assembly="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" Namespace="CrystalDecisions.Web" TagPrefix="CR" %>
+<%--<%@ Register Assembly="Microsoft.ReportViewer.WebForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" Namespace="Microsoft.Reporting.WebForms" TagPrefix="rsweb" %>
+
+<%@ Register Assembly="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" Namespace="CrystalDecisions.Web" TagPrefix="CR" %>--%>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -29,7 +31,7 @@
                     </section>
                 </div>
                 <div class="right">
-                 ]<asp:Image ID="Image1" runat="server" style="margin-left:5px;margin-right:5px"/>
+                 <asp:Image ID="Image1" runat="server" style="margin-left:5px;margin-right:5px"/>
                        <h1 style="text-align:right;font-size:15.5pt;font-weight:bold;"><%=FullName %></h1>
                     <section style="text-align:right;margin-top:-10px">                       
                          <span><a href="AboutUs.aspx" >About Us</a>
@@ -65,7 +67,7 @@
         </form>
     </div>
 </body>
-        <script>
+<script>
     function idleLogout() {
         var t;
         window.onload = resetTimer;

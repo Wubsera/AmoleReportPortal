@@ -1,8 +1,9 @@
 ﻿<%@ Page Language="C#" EnableViewState="true" AutoEventWireup="true" CodeBehind="UploadBulkPaymentFile.aspx.cs" Inherits="AmoleReportPortal.UploadBulkPaymentFile" %>
 
-<%@ Register Assembly="Microsoft.ReportViewer.WebForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" Namespace="Microsoft.Reporting.WebForms" TagPrefix="rsweb" %>
+<%--<%@ Register Assembly="Microsoft.ReportViewer.WebForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" Namespace="Microsoft.Reporting.WebForms" TagPrefix="rsweb" %>
 
-<%@ Register Assembly="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" Namespace="CrystalDecisions.Web" TagPrefix="CR" %>
+<%@ Register Assembly="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" Namespace="CrystalDecisions.Web" TagPrefix="CR" %>--%>
+
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -46,7 +47,7 @@
             </div>
             <div class="table2">
                 <div class="left">
-                    <span><%=reportLink %></span>
+                    <span ><%=reportLink %></span>
                 </div>
                 <div class="right">
                     <span>
@@ -68,13 +69,13 @@
                         <asp:Label ID="Label8" runat="server" Text="Label">
                             Merchant:
                         </asp:Label>
-                        <asp:DropDownList ID="DropDownList1" runat="server"  Style="font-size: 12pt;  width: 430px;padding:5px; font-weight: bold; background-color: #FFFFE1" autocomplete="off"></asp:DropDownList>
+                        <asp:DropDownList ID="DropDownList1" runat="server"  Style="font-size: 12pt;  width: 480px;padding:5px; font-weight: bold; background-color: #FFFFE1" autocomplete="off"></asp:DropDownList>
                     </section>
                     <section>
                         <asp:Label ID="Label2" runat="server" Style="padding-bottom: 5px" Height="19px">
                             Description of Batch:
                         </asp:Label>
-                        <textarea id="TextArea1" cols="20" rows="2" style="font-size: 12pt; padding-top: 3px; padding-bottom: 3px; width: 360px; font-weight: bold; background-color: #FFFFE1" autocomplete="off"></textarea>
+                        <textarea id="TextArea1" cols="20" rows="2" style="font-size: 12pt; padding-top: 3px; padding-bottom: 3px; width: 410px; font-weight: bold; background-color: #FFFFE1" autocomplete="off" runat="server"></textarea>
                     </section>
                     <section>
                         <asp:Label ID="Label3" runat="server" Text="Label">
@@ -85,32 +86,59 @@
                         <asp:Label ID="Label9" runat="server" Text="Label">
                             and after this time:
                         </asp:Label>
-                        <asp:TextBox ID="TextBox5" runat="server" Style="font-size: 12pt; padding-top: 3px; padding-bottom: 3px; width: 54px; font-weight: bold; background-color: #FFFFE1" autocomplete="off"></asp:TextBox>
-                    </section>
 
-
+                        <%--<asp:TextBox ID="TextBox5" runat="server" Style="font-size: 12pt; padding-top: 3px; padding-bottom: 3px; width: 54px; font-weight: bold; background-color: #FFFFE1" autocomplete="off"></asp:TextBox>--%>
+                           
+                         <input type="time" id="appt" name="appt" runat="server"  value="<%= appt %>" style="width:105px; margin: .4rem 0;background-color: #FFFFE1;"/>
+                        <%--<input type="date" value="<?= date('Y-m-d', time()); ?>" />--%>
+                      </section>
                     <br />
+                     <asp:Label ID="Label10" runat="server" Text="File type must be in CSV (Comma Delimited) or TXT (Tab Delimited) format." style="color:blue"></asp:Label>
                     <section>
-                        <asp:FileUpload ID="FileUpload1" runat="server" style="float:left" />
-                        <asp:Button ID="btnRead" CssClass="button" runat="server" Text="Import" OnClick="ReadCSV" Style="border-radius: 4px; background-color: #005CB7; font-size: 13pt; color: white; font-family: Calibri; font-weight: bold; cursor: pointer;margin-left:-7px" />
+                        <asp:FileUpload ID="FileUpload1" runat="server" style="float:left; width:470px; background-color:#FFFFE1; margin-right:8px"  />
+                        <asp:Button ID="btnRead" CssClass="button" runat="server" Text="Load File" OnClick="ReadCSV" Style="border-radius: 4px; background-color: #005CB7; font-size: 13pt; color: white; font-family: Calibri; font-weight: bold; cursor: pointer;margin-left:-7px" />
+                       <section>
                         <asp:Label ID="Label6" runat="server" Text="" ForeColor="Red"></asp:Label>
-
+                            <asp:Label ID="Label11" runat="server" Text="" ForeColor="blue"></asp:Label>
+                       </section> 
                     </section>
-
-                    <section>
-                        <asp:Button ID="Button1" runat="server" Text="Submit Batch" Style="margin-left: 222px; margin-top: 10px; border-radius: 4px; background-color: #005CB7; font-size: 13pt; color: white; font-family: Calibri; font-weight: bold; cursor: pointer" />
-                    </section>
+                        <div>
+                             <div style="float: left;margin-right:40px;">
+                                <asp:Panel ID="Panel1" runat="server" Style="overflow-y: auto; height: 80vh;margin-bottom:15px">
+                                    <asp:GridView ID="GridView1" runat="server">
+                                    </asp:GridView>
+                                </asp:Panel>
+                                 <div runat="server" id="success" style="border:1px solid;padding:2px;padding-left:5px">
+                                     <img src="image/check4.png" style="margin-left: 70px;" />
+                                     <section>
+                                         <asp:Label ID="Label7" runat="server" CssClass="label2" Text=""> <span style="color:blue;font-size:18pt;font-weight:bold"> <%=ReturnMsg1%></span></asp:Label>
+                                     </section>
+                                     <section>
+                                         <asp:Label ID="BatchID" runat="server" CssClass="label2" Text="" style="font-weight:bold">Batch ID: <%=BatchID1%> </asp:Label>
+                                     </section>
+                                     <section>
+                                         <asp:Label ID="Label1" runat="server" CssClass="label2" Text="" style="font-weight:bold">Number of Recipients: <%=TotalRecipients%> </asp:Label>
+                                     </section>
+                                     <section>
+                                         <asp:Label ID="Label4" runat="server" CssClass="label2" Text="" style="font-weight:bold">Batch Total Amount: <%=BatchTotalAmount%> ETB</asp:Label>
+                                     </section>
+                                     <section>
+                                         <asp:Label ID="Label5" runat="server" CssClass="label2" Text="" style="font-weight:bold"><%=ProcessAfterMsg%></asp:Label>
+                                     </section>
+                                     <section>
+                                         <asp:Button ID="Button2" runat="server" Text="OK" OnClick="Button2_Click" style="background-color:#005CB7;color:white;font-weight:bold;margin-left:70px;padding:1px 5px 1px 5px" />
+                                     </section>
+                                 </div>
+                            </div>
+                            <div style="float: left">
+                                <asp:Button ID="Button1" runat="server" Text="Submit Batch" Style="margin-top: 10px; border-radius: 4px; background-color: #005CB7; font-size: 13pt; color: white; font-family: Calibri; font-weight: bold; cursor: pointer" OnClick="Button1_Click" />
+                            </div>
+                        </div>
                 </div>
                 <div class="box2">
-                    <asp:Panel ID="Panel1" runat="server" Style="overflow-y: auto; height: 80vh">
-                        <asp:GridView ID="GridView1" runat="server">
-                        </asp:GridView>
-                    </asp:Panel>
                 </div>
             </div>
-
         </form>
-
 </body>
 
 <script>
@@ -147,7 +175,7 @@
 
         function resetTimer() {
             clearTimeout(t);
-            t = setTimeout(logout, 1800000);  // time is in milliseconds
+            t = setTimeout(logout, 1200000);  // time is in milliseconds //20 minutes
         }
     }
     idleLogout();

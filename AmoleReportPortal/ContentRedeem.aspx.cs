@@ -199,10 +199,11 @@ namespace AmoleReportPortal
                     //crystalReport.Dispose();
                     //crystalReport.Close();
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
-                    ClientScript.RegisterClientScriptBlock(this.GetType(), "s", "window.alert('Check your connection ');", true);
-                    Response.Redirect("Login.aspx");
+                    //string message = "" + ex;
+                    ClientScript.RegisterClientScriptBlock(this.GetType(), "s", "window.alert('Request timeout, please try again. ');", true);
+                   
                 }
             }
             else

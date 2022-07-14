@@ -122,36 +122,44 @@ namespace AmoleReportPortal
             {
                 LastLoggedIn = Session["LastLoggedIn"].ToString();
             }
-            SqlConnection phcon = new SqlConnection(ConfigurationManager.ConnectionStrings["FettanReportPortalConnection"].ToString());
-            phcon.Open();
-            SqlCommand phcmd = new SqlCommand("sp_Portal_Report_Heading", phcon);
-            phcmd.CommandType = CommandType.StoredProcedure;
-            phcmd.Parameters.AddWithValue("@LoginID", LoginID);
-            using (SqlDataReader sqlReader = phcmd.ExecuteReader())
+            try
+            {
+                SqlConnection phcon = new SqlConnection(ConfigurationManager.ConnectionStrings["FettanReportPortalConnection"].ToString());
+                phcon.Open();
+                SqlCommand phcmd = new SqlCommand("sp_Portal_Report_Heading", phcon);
+                phcmd.CommandType = CommandType.StoredProcedure;
+                phcmd.Parameters.AddWithValue("@LoginID", LoginID);
+                using (SqlDataReader sqlReader = phcmd.ExecuteReader())
+                {
+
+
+                    while (sqlReader.Read())
+                    {
+                        try
+                        {
+                            byte[] PH = (byte[])sqlReader["Photo"];
+
+                            photo = Convert.ToBase64String(PH);
+                            Image1.ImageUrl = "data:image;base64," + photo;
+                        }
+                        catch (Exception)
+                        {
+                            Image1.ImageUrl = "~/images/AmoleLogo.jpg";
+                        }
+                        Image1.Width = 85;
+                        Image1.Height = 75;
+
+
+                    }
+                    sqlReader.Close();
+                }
+                phcon.Close();
+            }
+            catch (Exception)
             {
 
-
-                while (sqlReader.Read())
-                {
-                    try
-                    {
-                        byte[] PH = (byte[])sqlReader["Photo"];
-
-                        photo = Convert.ToBase64String(PH);
-                        Image1.ImageUrl = "data:image;base64," + photo;
-                    }
-                    catch (Exception)
-                    {
-                        Image1.ImageUrl = "~/images/AmoleLogo.jpg";
-                    }
-                    Image1.Width = 85;
-                    Image1.Height = 75;
-
-
-                }
-                sqlReader.Close();
             }
-            phcon.Close();
+            
 
             if ((HttpContext.Current.Request.UrlReferrer == null))
             {
@@ -339,14 +347,14 @@ namespace AmoleReportPortal
             Session["date"] = date.ToString();
             Session["reportLink"] = reportLink.ToString();
             Session["rptnumber"] = rptnumber.ToString();
-            Session["EvenID"] = EventID.ToString();
+            Session["EventID"] = EventID.ToString();
             if (MerchantID != "")
             {
                 Response.Redirect("ContentRedeem.aspx");
             }
             else
             {
-                ClientScript.RegisterClientScriptBlock(this.GetType(), "s", "window.alert('Merchant not assigned, please contact amole support ');", true);
+                ClientScript.RegisterClientScriptBlock(this.GetType(), "s", "window.alert('Please contact amole support ');", true);
             }
         }
 

@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#"  AutoEventWireup="true" CodeBehind="PortalGetList.aspx.cs" Inherits="AmoleReportPortal.PortalGetList" %>     
-<%@ Register Assembly="Microsoft.ReportViewer.WebForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" Namespace="Microsoft.Reporting.WebForms" TagPrefix="rsweb" %>
+<%--<%@ Register Assembly="Microsoft.ReportViewer.WebForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" Namespace="Microsoft.Reporting.WebForms" TagPrefix="rsweb" %>
 
-<%@ Register assembly="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" namespace="CrystalDecisions.Web" tagprefix="CR" %>  
+<%@ Register assembly="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" namespace="CrystalDecisions.Web" tagprefix="CR" %>  --%>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -236,7 +236,7 @@
                                  <asp:TextBox ID="txtTo" AutoCompleteType="Disabled" runat="server" OnTextChanged="txtTo_TextChanged" onfocus="this.placeholder = 'End Date'" onblur="this.placeholder = 'End Date'" Style="font-family: Calibri; font-size: 13pt; text-align:center; color: blue; font-weight: bold;" Width="209px" Height="30px" BorderStyle="Double" BackColor="#ffffe1" BorderColor="Gray" CssClass="auto-style17"></asp:TextBox>
                                  </td>
                             <td>
-                              <asp:ImageButton ID="ImageButton3" runat="server" ToolTip="GENERATE REPORT" BackColor="white"  CssClass="auto-style16" Height="48px" OnClick="Generate_Click"  src="Images/run.png"  style="border-radius: 15px; font-family:Calibri;font-size:18pt;color:blue;font-weight:bold" Width="59px" />  
+                              <%--<asp:ImageButton ID="ImageButton3" runat="server" ToolTip="GENERATE REPORT" BackColor="white"  CssClass="auto-style16" Height="48px" OnClick="Generate_Click"  src="Images/run.png"  style="border-radius: 15px; font-family:Calibri;font-size:18pt;color:blue;font-weight:bold" Width="59px" />--%>  
                             </td>
                     </tr>
                      </table>
@@ -313,7 +313,7 @@
 
         function resetTimer() {
             clearTimeout(t);
-            t = setTimeout(logout, 1800000);  // time is in milliseconds
+            t = setTimeout(logout, 1200000);  // time is in milliseconds //20 minutes
         }
     }
     idleLogout();

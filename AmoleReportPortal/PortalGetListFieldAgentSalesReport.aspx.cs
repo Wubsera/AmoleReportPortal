@@ -350,14 +350,14 @@ namespace AmoleReportPortal
             WoredaConnection.Open();
             WoredaDropdown.DataSource = WoredaCommand.ExecuteReader();
             WoredaDropdown.DataTextField = "Woreda";
-            WoredaDropdown.DataValueField = "Woreda";
+            WoredaDropdown.DataValueField = "WoredaID";
             WoredaDropdown.DataBind();
             WoredaConnection.Close();
         }
 
         protected void CityDropdown_SelectedIndexChanged(object sender, EventArgs e)
         {
-            City = CityDropdown.SelectedValue; 
+            City = CityDropdown.SelectedValue.ToString();
         }
 
         protected void WoredaDropdown_SelectedIndexChanged(object sender, EventArgs e)

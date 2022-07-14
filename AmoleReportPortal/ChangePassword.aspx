@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ChangePassword.aspx.cs" Inherits="AmoleReportPortal.ChangePassword" %>
-<%@ Register Assembly="Microsoft.ReportViewer.WebForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" Namespace="Microsoft.Reporting.WebForms" TagPrefix="rsweb" %>
+<%--<%@ Register Assembly="Microsoft.ReportViewer.WebForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" Namespace="Microsoft.Reporting.WebForms" TagPrefix="rsweb" %>
 
-<%@ Register Assembly="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" Namespace="CrystalDecisions.Web" TagPrefix="CR" %>
+<%@ Register Assembly="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" Namespace="CrystalDecisions.Web" TagPrefix="CR" %>--%>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -105,7 +105,7 @@
         </span>
     </div>
 </body>
-        <script>
+    <script>
     function idleLogout() {
         var t;
         window.onload = resetTimer;
@@ -121,11 +121,11 @@
 
         function resetTimer() {
             clearTimeout(t);
-            t = setTimeout(logout, 1800000);  // time is in milliseconds
+            t = setTimeout(logout, 1200000);  // time is in milliseconds
         }
     }
     idleLogout();
-</script>
+</script>   
      <script>
         $(document).ready(function () {      // Wait for the HTML to finish loading.
             var resize = function () {

@@ -211,7 +211,7 @@
 
         function resetTimer() {
             clearTimeout(t);
-            t = setTimeout(logout, 1800000);  // time is in milliseconds
+            t = setTimeout(logout, 1200000);  // time is in milliseconds //20 minutes
         }
     }
     idleLogout();

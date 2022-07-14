@@ -70,6 +70,7 @@ namespace AmoleReportPortal
             try
             {
                 Session["reportLink"]= reportLink.ToString();
+                Session["rptnumber"] = rptnumber.ToString();
             }
             catch (Exception)
             {
@@ -174,9 +175,21 @@ namespace AmoleReportPortal
             {
                 Response.Redirect("PortalGetListAccountStatement.aspx");
             }
+            else if (rptnumber == 130)
+            {
+                Response.Redirect("BulkPaymentsBatchFileCheckStatus.aspx");
+            }
             else if (rptnumber == 131)
             {
                 Response.Redirect("UploadBulkPaymentFile.aspx");
+            }
+            else if(rptnumber == 132)
+            {
+                Response.Redirect("PortalGetListBulkPaymentBatchFileSummaryReport.aspx");
+            }
+            else if (rptnumber == 133)
+            {
+                Response.Redirect("PortalGetListBulkPaymentBatchFileDetailReport.aspx");
             }
 
             else
@@ -349,45 +362,45 @@ namespace AmoleReportPortal
             // MerchantID = DropDownListSelectBranch.SelectedValue;
 
         }
-        protected void Generate_Click(object sender, ImageClickEventArgs e)
-        {
-            if (rptnumber == 103)
-            {
-                Response.Redirect("dstv.aspx");
-            }
-            else if (rptnumber == 104)
-            {
-                Response.Redirect("MposMerchantActivity.aspx");
-            }
-            else if (rptnumber == 105)
-            {
-                Response.Redirect("SupplyOrder.aspx");
-            }
-            else if (rptnumber == 106)
-            {
-                Response.Redirect("EthAirlinesReservation.aspx");
-            }
-            else if (rptnumber == 107)
-            {
-                Response.Redirect("ContentSales.aspx");
-            }
-            else if (rptnumber == 108)
-            {
-                Response.Redirect("AirtimeTopup.aspx");
-            }
-            else if (rptnumber == 109)
-            {
-                Response.Redirect("MerchantAccTransactionsReport.aspx");
-            }
-            else if (rptnumber == 110)
-            {
-                Response.Redirect("AmolePaymentGatewayLogReport1.aspx");
-            }
-            else if (rptnumber == 111)
-            {
-                Response.Redirect("AmoleServiceIntergrationLogReport.aspx");
-            }
-        }
+        //protected void Generate_Click(object sender, ImageClickEventArgs e)
+        //{
+        //    if (rptnumber == 103)
+        //    {
+        //        Response.Redirect("dstv.aspx");
+        //    }
+        //    else if (rptnumber == 104)
+        //    {
+        //        Response.Redirect("MposMerchantActivity.aspx");
+        //    }
+        //    else if (rptnumber == 105)
+        //    {
+        //        Response.Redirect("SupplyOrder.aspx");
+        //    }
+        //    else if (rptnumber == 106)
+        //    {
+        //        Response.Redirect("EthAirlinesReservation.aspx");
+        //    }
+        //    else if (rptnumber == 107)
+        //    {
+        //        Response.Redirect("ContentSales.aspx");
+        //    }
+        //    else if (rptnumber == 108)
+        //    {
+        //        Response.Redirect("AirtimeTopup.aspx");
+        //    }
+        //    else if (rptnumber == 109)
+        //    {
+        //        Response.Redirect("MerchantAccTransactionsReport.aspx");
+        //    }
+        //    else if (rptnumber == 110)
+        //    {
+        //        Response.Redirect("AmolePaymentGatewayLogReport1.aspx");
+        //    }
+        //    else if (rptnumber == 111)
+        //    {
+        //        Response.Redirect("AmoleServiceIntergrationLogReport.aspx");
+        //    }
+        //}
 
         protected void txtFrom_TextChanged(object sender, EventArgs e)
         {
