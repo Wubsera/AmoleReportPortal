@@ -1,1 +1,1 @@
-AmoleReportPrtal is the properties of Moneta Techmologies (Fettan Gropup of Companies). 
+this source code is owned by Moneta Techmologies (Fettan Gropup of Companies). 
