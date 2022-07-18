@@ -1,6 +1,0 @@
-C:\Windows\Microsoft.NET\Framework\v4.0.30319
-
-ASPNET_REGIIS -pef "connectionStrings" "C:\inetpub\AmoleReportPortal"
-ASPNET_REGIIS -pdf "connectionStrings" "C:\inetpub\AmoleReportPortal"
-
-C:\Windows\Microsoft.NET\Framework\v4.0.30319>ASPNET_REGIIS -PEF "connectionstrings" "C:\inetpub\AmoleReportPortal"
